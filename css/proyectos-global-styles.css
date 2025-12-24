@@ -1,0 +1,344 @@
+.project-details__wrapper,
+.project-gallery__wrapper,
+.project-action__wrapper {
+  max-width: 75rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+/*-------------------------BANNER-------------------------*/
+/* .banner {
+  min-height: 70vh;
+  height: auto;
+} */
+.banner__text {
+  text-align: center;
+}
+.banner__title {
+  font-weight: 900;
+}
+.banner__title--h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 900;
+
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.banner__title--h3 {
+  font-size: var(--font-size-h4);
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.8rem;
+}
+.banner__buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.2rem;
+}
+.banner__button {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+}
+.banner__button--text {
+  position: absolute;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+/*-----------------------------------PROJECT DETAILS-----------------------------------*/
+.project__details {
+  position: relative;
+  background-color: var(--color-background-light);
+}
+.project-details__wrapper {
+  margin: 5rem auto;
+}
+.project-details__item {
+  background: var(--color-background-gray);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out;
+  text-align: start;
+  padding: 2rem 1.5rem;
+}
+.project-details__title {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  font-weight: 900;
+  text-align: start;
+  margin-bottom: 1.5rem;
+}
+.project__info {
+  font-size: var(--font-size-paragraph);
+  font-weight: 400;
+  color: var(--color-text-body);
+}
+.project__info--item strong {
+  font-weight: 700;
+}
+.project__info--description {
+  margin-top: 1rem;
+}
+/* ======================================= */
+/* ESTILOS PARA LA SECCIÓN DE VIDEO         */
+/* ======================================= */
+
+.project__video {
+  /* Fondo y espaciado consistentes con otras secciones */
+  background-color: var(--color-background-light);
+  padding: 5rem 0;
+}
+
+.project-video__wrapper {
+  /* Contenedor estándar del sitio */
+  max-width: 75rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.project-video__title {
+  /* Estilo de título consistente con otras secciones */
+  font-size: var(--font-size-h2);
+  font-weight: 900;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2.5rem; /* Un poco más de espacio antes del video */
+}
+
+/* El contenedor del video (la parte más importante) */
+.project-video__container {
+  position: relative;
+  width: 100%;
+  max-width: 960px; /* Un ancho máximo para que no se vea gigante en pantallas 4K */
+  margin: 0 auto;
+
+  /* La magia para que sea responsive y mantenga la proporción 16:9 */
+  aspect-ratio: 16 / 9;
+
+  /* Estética para que encaje con tu diseño */
+  border-radius: 0.5rem;
+  overflow: hidden; /* Necesario para que el iframe respete el borde redondeado */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-video__container iframe {
+  /* El video (iframe) ocupa el 100% de su contenedor */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; /* Quita cualquier borde por defecto del iframe */
+}
+/*-----------------------------------PHOTO GALLERY-----------------------------------*/
+.project__gallery {
+  background: var(--color-background-gray);
+}
+.project-gallery__wrapper {
+  margin: 5rem auto;
+}
+.project-gallery__title {
+  font-size: var(--font-size-h2);
+  font-weight: 900;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.project-gallery__card {
+  position: relative;
+  break-inside: avoid;
+}
+.project-gallery__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: var(--color-background-light);
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.showcase-project-item {
+  margin-bottom: 3rem;
+  background-color: var(--color-background-light);
+}
+/*-----------------------------------CALL TO ACTION-----------------------------------*/
+.project__cta {
+  background: var(--color-background-light);
+}
+.project-action__wrapper {
+  margin: 5rem auto;
+}
+.project-action__title {
+  font-size: var(--font-size-h2);
+  font-weight: 900;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.project__cta--text {
+  font-size: var(--font-size-paragraph);
+  font-weight: 400;
+  color: var(--color-text-body);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.project__cta--buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.2rem;
+}
+.btn {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.01rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+}
+.btn--primary:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.btn--secondary {
+  color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--color-accent);
+}
+.btn--secondary:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.bnt--text {
+  position: absolute;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+/*-----------------------------------GRID-----------------------------------*/
+/*-------------------------BANNER-------------------------*/
+.banner__text {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+}
+.banner__title {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  align-self: end;
+  justify-self: center;
+}
+.banner__buttons {
+  grid-column: 1/-1;
+  grid-row: 2/-1;
+  align-self: start;
+  justify-self: center;
+}
+/*-------------------------PROJECT-DETAILS-------------------------*/
+.project__details {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.project-details__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.project-gallery__box {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-rows: auto;
+  gap: 2rem;
+  grid-column: 1/-1;
+}
+.project__gallery {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.projects-gallery__image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--color-background-light);
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+/*-------------------------CALL TO ACTION-------------------------*/
+.project__cta {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+/*-------------------------FOOTER-------------------------*/
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+/*-----------------------------------MEDIA QUERIES-----------------------------------*/
+/* RESPONSIVE DESIGN 768px */
+@media (min-width: 768px) {
+  /*-------------------------BANNER-------------------------*/
+  .banner__title--h1 {
+    font-size: 4rem;
+    font-weight: 900;
+  }
+  .banner__title--h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+  .banner__buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .banner__button {
+    width: 300px;
+    z-index: 120;
+  }
+  .project__cta--buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .btn {
+    width: 300px;
+    z-index: 120;
+  }
+}
+/* RESPONSIVE DESIGN 1080px */
+@media (min-width: 1080px) {
+  .banner__title--h2 {
+    font-size: 5rem;
+    font-weight: 900;
+  }
+}

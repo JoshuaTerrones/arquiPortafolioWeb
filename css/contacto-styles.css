@@ -1,0 +1,115 @@
+/*-------------------------BANNER-------------------------*/
+
+.banner__text {
+  text-align: center;
+}
+
+.banner__title--h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 900;
+}
+/*-----------------------------------GRID-----------------------------------*/
+.container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6rem calc(100vh - 6rem) auto auto auto;
+}
+
+.navbar,
+.banner,
+.contact,
+.footer {
+  grid-column: 1/-1;
+}
+
+/*-------------------------BANNER-------------------------*/
+.banner__text {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.banner__title {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  align-self: end;
+  justify-self: center;
+}
+
+.banner__link {
+  grid-column: 2/3;
+  grid-row: 2/-1;
+  align-self: start;
+  justify-self: center;
+}
+
+/*-------------------------CONTACT-------------------------*/
+
+.contact {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-row: 3/4;
+}
+
+/*-------------------------FOOTER-------------------------*/
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-row: 4/-1;
+  justify-items: center;
+}
+
+/*-----------------------------------MEDIA QUERIES-----------------------------------*/
+/* RESPONSIVE DESIGN 768px */
+
+@media (min-width: 768px) {
+  /*-------------------------BANNER-------------------------*/
+  .banner__title--h1 {
+    font-size: 4rem;
+    font-weight: 900;
+  }
+  /*-------------------------CONTACT-------------------------*/
+  .form__wrapper {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .form__content {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+  }
+  .form__box {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
+}
+/* RESPONSIVE DESIGN 1080px */
+@media (min-width: 1080px) {
+  .banner__title--h1 {
+    font-size: 5rem;
+    font-weight: 900;
+  }
+  .clients__boxes {
+    grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+  }
+  .form__fullname {
+    grid-column: 1/-1;
+  }
+  .form__subject {
+    grid-column: 1/-1;
+  }
+  .form__message {
+    grid-column: 1/-1;
+  }
+  .form__submit {
+    grid-column: 1/-1;
+  }
+}
