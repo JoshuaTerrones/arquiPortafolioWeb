@@ -1,10 +1,10 @@
 :root {
-  --color-primary: #000a60;
+  --color-primary: #373636;
   /* --color-secondary: #001955; */
-  --color-secondary: #000080;
-  --color-accent: #004bcd;
-  --color-background-light: #ffff;
-  --color-background-gray: #f0f5f9;
+  --color-secondary: #f2e8cf;
+  --color-accent: ;
+  --color-background-light: #373636;
+  --color-background-gray: #f2e8cf;
   --color-text-body: #6c757d;
   --color-text-light: #fafafa;
   --box-shadow-dark: 3px 3px 5px 1.8px rgba(0, 0, 0, 0.3),
