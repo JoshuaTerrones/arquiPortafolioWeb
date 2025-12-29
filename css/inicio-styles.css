@@ -209,7 +209,7 @@
 .select__title--h2 {
   font-size: var(--font-size-h2);
   font-weight: 900;
-  color: var(--color-primary);
+  color: #ffffff;
   margin-bottom: 2rem;
 }
 .select__paragraph {
@@ -598,7 +598,7 @@
 .process__title--h3 {
   font-size: var(--font-size-h2);
   font-weight: 900;
-  color: var(--color-primary);
+  color: #ffffff;
   margin-bottom: 2rem;
 }
 .process__paragraph {
@@ -676,7 +676,7 @@
 */
 .cta {
   position: relative;
-  background-color: var(--color-accent);
+  background-color: #f2e8cf;
 }
 .cta__wrapper {
   margin: 5rem auto;
