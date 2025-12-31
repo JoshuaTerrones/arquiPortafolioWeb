@@ -46,14 +46,14 @@
 }
 
 :root {
-  --color-primary: #373636;
+  --color-primary: ;
   /* --color-secondary: #001955; */
-  --color-secondary: #f2e8cf;
+  --color-secondary: #;
   --color-accent: ;
-  --color-background-light: #373636;
-  --color-background-gray: #f2e8cf;
-  --color-text-body: #6c757d;
-  --color-text-light: #fafafa;
+  --color-background-light: #;
+  --color-background-gray: #;
+  --color-text-body: #;
+  --color-text-light: #;
   --box-shadow-dark: 3px 3px 5px 1.8px rgba(0, 0, 0, 0.3),
     inset -5px -5px 5px rgba(0, 0, 0, 0.3),
     inset 5px 5px 5px rgba(203, 213, 225, 0.3);
@@ -146,7 +146,7 @@ img {
   left: 0;
   z-index: 1000;
   width: 100%;
-  background: var(--color-primary);
+  background: #373636;
 }
 .logo-brand {
   width: 13rem;
@@ -186,7 +186,7 @@ img {
   top: var(--height-navbar);
   left: -100%;
   z-index: 110;
-  background-color: var(--color-primary);
+  background-color: #25d366;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -203,7 +203,7 @@ img {
 .menu-list__link {
   text-decoration: none;
   display: block;
-  color: var(--color-text-light);
+  color: var(#f2e8cf);
   font-size: var(--font-size-paragraph);
   font-weight: 300;
   height: 3.5rem;
@@ -229,7 +229,7 @@ img {
   ); /* Ocupa la altura de la pantalla menos el navbar. */
   display: grid;
   place-items: center; /* Centra el contenido de texto. */
-  color: var(--color-text-light);
+  color: #f2e8cf;
 }
 .banner picture,
 .banner .banner-image__container {
@@ -275,7 +275,7 @@ img {
   overflow: hidden;
 }
 .banner__button--primary {
-  background-color: var(--color-accent);
+  background-color: #333333;
   color: var(--color-text-light);
 }
 .banner__button--primary:hover {
@@ -283,7 +283,7 @@ img {
 }
 .banner__button--secondary {
   color: var(--color-text-light);
-  background: rgba(255, 255, 255, 0.1);
+  background: #c47a5a;
   backdrop-filter: blur(20px);
   border: 1.5px solid var(--color-background-light);
 }
@@ -968,7 +968,7 @@ img {
 
 /*-------------------------RESULTS-------------------------*/
 .results {
-  background: var(--color-primary);
+  background: #3f5e73;
   color: var(--color-text-light);
   width: 100%;
 }
@@ -1653,19 +1653,18 @@ img {
     width: 200px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 .otro-blockquote{
   font-size: 1.4em;
   width:60%;
   margin:50px auto;
   font-family:Open Sans;
   font-style:italic;
-  color: #555555;
+  color: #f2e8cf;
   padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid #78C0A8 ;
+  border-left:8px solid ;
   line-height:1.6;
   position: relative;
-  background:#EDEDED;
+ ;
 }
 
 .otro-blockquote::before{
@@ -1809,8 +1808,8 @@ ul{
   border-radius: 0.3rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background-color: var(--color-background-light);
-  color: var(--color-accent);
+  background-color: #c47a5a;
+  color: #ffffff;
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -1932,7 +1931,7 @@ ul{
   margin: 0;
 }
 .districts__list-item {
-  background-color: var(--color-background-light);
+  background-color: var(--color-background-gray);
   padding: 0.8rem 1.2rem;
   border-radius: 0.3rem;
   font-size: var(--font-size-paragraph);
@@ -1959,7 +1958,7 @@ ul{
 }
 .faq__title--h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  color: var(--color-background-gray);
   font-weight: 900;
   margin-bottom: 1.5rem;
 }
@@ -2160,6 +2159,7 @@ ul{
   grid-row: 3/4;
   justify-content: center;
   align-items: center;
+  background: #3f5e73;
 }
 .results__wrapper {
   display: grid;
@@ -2189,6 +2189,8 @@ ul{
   grid-template-rows: 1fr;
   align-items: center;
   justify-content: center;
+  background: #373636;
+  color: #f2e8cf;
 }
 .services__wrapper {
   box-sizing: border-box;
@@ -2211,6 +2213,7 @@ ul{
   gap: 2rem;
   grid-column: 1/-1;
   grid-row: 2/3;
+  background: #24262b;
 }
 .services__item {
   display: grid;
