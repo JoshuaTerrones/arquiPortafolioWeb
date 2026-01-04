@@ -78,40 +78,14 @@
   box-sizing: inherit;
 }
 /* -------------------ROBOTO------------------- */
-@font-face {
-  font-family: "Roboto";
-  src: url("/font/roboto/Roboto_900-Black.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("/font/roboto/Roboto_600-Bold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("/font/roboto/Roboto_400-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("/font/roboto/Roboto_300-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+
 html,
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 15px;
-  line-height: 1.2;
+  line-height: 1.4;
 }
+
 img {
   max-width: 100%;
 }
@@ -146,7 +120,7 @@ img {
   left: 0;
   z-index: 1000;
   width: 100%;
-  background: #373636;
+  background: #c47a5a;
 }
 .logo-brand {
   width: 13rem;
@@ -186,7 +160,7 @@ img {
   top: var(--height-navbar);
   left: -100%;
   z-index: 110;
-  background-color: #25d366;
+  background-color: #a4c7b1;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -203,7 +177,7 @@ img {
 .menu-list__link {
   text-decoration: none;
   display: block;
-  color: var(#f2e8cf);
+  color: var(#e4e7df);
   font-size: var(--font-size-paragraph);
   font-weight: 300;
   height: 3.5rem;
@@ -299,7 +273,7 @@ img {
 /*-------------------------FORMULARIO (base)-------------------------*/
 .contact {
   position: relative;
-  background-color: var(--color-background-light);
+  background: color 3px; ;
 }
 .form__wrapper {
   margin: 5rem auto;
@@ -387,7 +361,7 @@ img {
   outline: 0;
   border: 1px solid #ced4da;
   margin-top: 0.75rem;
-  color: var(--color-text-body);
+  color: #000;
 }
 .form__submit {
   text-align: center;
@@ -430,7 +404,7 @@ img {
 /* ------------------- ESTILO DEL PLACEHOLDER ------------------- */
 .form__input::placeholder,
 .form__textarea::placeholder {
-  color: #ced4da;
+  color: #000;
   opacity: 1;
 }
 .form__input:-ms-input-placeholder,
@@ -696,6 +670,7 @@ img {
   grid-template-rows: auto 1fr;
   align-items: start;
   gap: 3rem;
+  background: #f2e8cf;
 }
 .form__content {
   display: grid;
@@ -911,10 +886,11 @@ img {
   .menu-list__link {
     padding: 0;
     position: relative;
+    color: #ffffff;
   }
   .menu-list__link:hover {
     background: none;
-    color: var(--color-text-light);
+    color: #;
   }
   .menu-list__link::before,
   .menu-list__link::after {
@@ -923,7 +899,7 @@ img {
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: var(--color-accent);
+    background-color: #f2e8cf;
     transform: scaleX(0);
     transition: all 0.5s;
   }
@@ -2028,7 +2004,8 @@ ul{
 }
 .blog__title--h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+   color: #f2e8cf;
+
   font-weight: 900;
   text-align: center;
   margin-bottom: 2rem;
@@ -2036,18 +2013,20 @@ ul{
 .blog__paragraph {
   font-size: var(--font-size-paragraph);
   font-weight: 400;
-  color: var(--color-text-body);
+ color: #f2e8cf;
   text-align: center;
   max-width: 80ch;
   margin-left: auto;
   margin-right: auto;
 }
 .article__item {
-  background-color: var(--color-text-light);
+  background-color: #7d8f84;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   border-radius: 0.5rem;
   overflow: hidden;
+  color: #f2e8cf;
+
   transition: opacity 0.3s ease-in-out;
 }
 .article__item:hover {
@@ -2074,7 +2053,7 @@ ul{
 .article__text--item {
   font-size: var(--font-size-paragraph);
   font-weight: 400;
-  color: var(--color-text-body);
+  color: #f2e8cf;
   margin-bottom: 1rem;
 }
 .article__button--link {
@@ -2093,6 +2072,8 @@ ul{
   font-size: var(--font-size-paragraph);
   font-weight: 600;
   margin-right: 0.5rem;
+  color: #f2e8cf;
+
 }
 .article__link svg {
   width: 1.2rem;
@@ -2508,6 +2489,7 @@ ul{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  
 }
 /*-------------------------FOOTER-------------------------*/
 .footer {
