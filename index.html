@@ -20,6 +20,9 @@
     <title>Criterio Arquitectónico | Arquitectura que acompaña y resuelve</title>
 
     <!-- FAVICON -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+
+
     <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
     <link href="favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
     <link href="favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
@@ -114,21 +117,20 @@
             />
           </a>
 
-          <button
-            aria-controls="menu-list"
-            aria-expanded="false"
-            aria-label="Abrir menú de navegación"
-            class="menu-btn"
-            id="menu-btn"
-            type="button"
-          >
-            <svg aria-hidden="true" class="menu-icon menu-icon--bars" height="18" style="display: block" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-bars"></use>
-            </svg>
-            <svg aria-hidden="true" class="menu-icon menu-icon--close" height="18" style="display: none" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-close"></use>
-            </svg>
-          </button>
+    <button
+  aria-controls="menu-list"
+  aria-expanded="false"
+  aria-label="Abrir menú de navegación"
+  class="menu-btn"
+  id="menu-btn"
+  type="button"
+>
+  <!-- Icono "hamburguesa" -->
+  <i class="fa-solid fa-bars menu-icon menu-icon--bars" aria-hidden="true" style="display:block;"></i>
+
+  <!-- Icono "cerrar" -->
+  <i class="fa-solid fa-xmark menu-icon menu-icon--close" aria-hidden="true" style="display:none;"></i>
+</button>
 
           <ul class="menu-list" id="menu-list">
             <li class="menu-list__item">
@@ -1092,9 +1094,9 @@
     </main>
 
     <!-- JAVASCRIPT -->
-    <script src="js/main.js" type="module"></script>
-    <script src="js/results.js" type="module"></script>
-    <script defer src="js/carousel-projects.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/results.js" type="module"></script>
+    <script defer src="/js/carousel-projects.js"></script>
 
     <!-- Tracking: eliminado porque estaba vacío / probablemente era de antes -->
   </body>

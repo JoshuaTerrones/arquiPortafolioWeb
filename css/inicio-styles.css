@@ -177,7 +177,7 @@ img {
 .menu-list__link {
   text-decoration: none;
   display: block;
-  color: var(#e4e7df);
+  color:#e4e7df;
   font-size: var(--font-size-paragraph);
   font-weight: 300;
   height: 3.5rem;
