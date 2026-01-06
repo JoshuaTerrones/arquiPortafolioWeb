@@ -5,29 +5,18 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- =========================================
-      PLANTILLA PROYECTO (CAMBIAR EN CADA PROYECTO)
-      1) Title
-      2) Meta description
-      3) Canonical / og:url
-      4) og:image
-      5) H1 y subtítulo
-      6) Sector / Servicio / Lugar / Descripción
-      7) Imágenes de galería + ALT
-    ========================================== -->
-
-    <!-- META (LIMPIOS A CRITERIO ARQUITECTÓNICO) -->
+    <!-- META (CRITERIO ARQUITECTÓNICO) -->
     <meta
       name="description"
-      content="Proyecto San Genaro desarrollado por Criterio Arquitectónico. Diseño arquitectónico integral con evaluación técnica, distribución eficiente y acompañamiento durante el proceso."
+      content="Vivienda multifamiliar en Chorrillos desarrollada por Criterio Arquitectónico. Diseño arquitectónico completo con organización funcional clara, iluminación, ventilación y eficiencia espacial."
     />
     <meta name="author" content="Criterio Arquitectónico" />
     <meta name="robots" content="index, follow" />
 
-    <!-- CANONICAL (SIN DOMINIOS ANTERIORES) -->
-    <link rel="canonical" href="/html/Proyecto-san-genaro.html" />
+    <!-- CANONICAL -->
+    <link rel="canonical" href="/html/Proyecto-vivienda-multifamiliar-chorrillos.html" />
 
-    <title>Proyecto San Genaro | Criterio Arquitectónico</title>
+    <title>Vivienda Multifamiliar en Chorrillos | Criterio Arquitectónico</title>
 
     <!-- FAVICON -->
     <link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
@@ -41,7 +30,7 @@
     <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="/css/proyectos-global-styles.css" rel="stylesheet" type="text/css" />
 
-    <!-- FUENTE (CONSISTENTE CON EL RESTO) -->
+    <!-- FUENTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -49,28 +38,25 @@
       rel="stylesheet"
     />
 
-    <!-- OPEN GRAPH (CORREGIDO) -->
-    <meta property="og:title" content="Proyecto San Genaro | Criterio Arquitectónico" />
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Vivienda Multifamiliar en Chorrillos | Criterio Arquitectónico" />
     <meta
       property="og:description"
-      content="Proyecto desarrollado con criterio técnico: distribución eficiente, documentación y acompañamiento para decisiones seguras."
+      content="Proyecto residencial con organización funcional clara: estacionamiento en primer nivel y unidades habitacionales en niveles superiores, priorizando iluminación, ventilación y eficiencia espacial."
     />
-    <!-- Usa una imagen REAL del proyecto (ideal 1200x630) -->
-    <meta
-      property="og:image"
-      content="/image/proyectos/projects/ImageDesing_Sol-y-Mar_Miraflores/banner_Desktop_Sol-y-Mar.webp"
-    />
-    <meta property="og:url" content="/html/Proyecto-san-genaro.html" />
+    <!-- Reemplaza por imagen real del proyecto cuando la tengas -->
+    <meta property="og:image" content="images/vivienda-multifamiliar-chorrillos-banner.webp" />
+    <meta property="og:url" content="/html/Proyecto-vivienda-multifamiliar-chorrillos.html" />
     <meta property="og:type" content="article" />
 
-    <!-- JSON-LD (LIMPIO, SIN DOMINIOS/MARCAS ANTERIORES) -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Proyecto San Genaro | Criterio Arquitectónico",
-        "url": "/html/Proyecto-san-genaro.html",
-        "description": "Proyecto de diseño arquitectónico integral desarrollado con evaluación técnica y acompañamiento.",
+        "name": "Vivienda Multifamiliar – Chorrillos | Criterio Arquitectónico",
+        "url": "/html/Proyecto-vivienda-multifamiliar-chorrillos.html",
+        "description": "Proyecto arquitectónico de vivienda multifamiliar en Chorrillos con organización funcional clara, estacionamiento en primer nivel y unidades habitacionales en niveles superiores, priorizando iluminación, ventilación y eficiencia espacial.",
         "publisher": {
           "@type": "Organization",
           "name": "Criterio Arquitectónico"
@@ -136,22 +122,15 @@
       <!-- BANNER -->
       <section aria-labelledby="banner-heading" class="banner">
         <picture>
-          <source
-            media="(max-width: 767px)"
-            srcset="/image/proyectos/projects/ImageDesing_Sol-y-Mar_Miraflores/banner_Mobile_Sol-y-Mar.webp"
-            type="image/webp"
-          />
-          <source
-            media="(min-width: 768px)"
-            srcset="/image/proyectos/projects/ImageDesing_Sol-y-Mar_Miraflores/banner_Desktop_Sol-y-Mar.webp"
-            type="image/webp"
-          />
+          <!-- Si aún no tienes versión mobile, puedes usar la misma imagen -->
+          <source media="(max-width: 767px)" srcset="images/vivienda-multifamiliar-chorrillos-banner.webp" type="image/webp" />
+          <source media="(min-width: 768px)" srcset="images/vivienda-multifamiliar-chorrillos-banner.webp" type="image/webp" />
           <img
-            alt="Proyecto San Genaro | Criterio Arquitectónico"
+            alt="Vivienda multifamiliar en Chorrillos | Proyecto residencial por Criterio Arquitectónico"
             class="banner__image"
             height="1080"
             loading="eager"
-            src="/image/proyectos/projects/ImageDesing_Sol-y-Mar_Miraflores/banner_Desktop_Sol-y-Mar.webp"
+            src="images/vivienda-multifamiliar-chorrillos-banner.webp"
             width="1920"
           />
         </picture>
@@ -161,10 +140,8 @@
         <div class="banner__wrapper">
           <div class="banner__text">
             <div class="banner__title">
-              <h1 class="banner__title--h1" id="banner-heading">Proyecto San Genaro</h1>
-
-              <!-- Subtítulo opcional (si no tienes, déjalo vacío) -->
-              <h3 class="banner__title--h3">Vivienda multifamiliar · Chorrillos, Lima</h3>
+              <h1 class="banner__title--h1" id="banner-heading">Vivienda multifamiliar – Chorrillos</h1>
+              <h3 class="banner__title--h3">Residencial · Chorrillos, Lima – Perú</h3>
             </div>
 
             <div class="banner__buttons">
@@ -185,16 +162,17 @@
 
             <div class="project__info">
               <p class="project__info--item"><strong>Sector:</strong> Residencial</p>
-              <p class="project__info--item"><strong>Servicio:</strong> Diseño arquitectónico integral</p>
-              <p class="project__info--item"><strong>Lugar:</strong> Chorrillos, Lima</p>
+              <p class="project__info--item"><strong>Servicio:</strong> Diseño arquitectónico completo</p>
+              <p class="project__info--item"><strong>Lugar:</strong> Chorrillos, Lima – Perú</p>
 
               <p class="project__info--description">
-                Proyecto de vivienda multifamiliar desarrollado con un enfoque técnico y normativo, orientado a resolver de
-                manera eficiente la distribución del terreno. La propuesta organiza los ambientes en distintos niveles,
-                priorizando ventilación natural, circulación clara y un uso equilibrado del espacio.
+                Proyecto arquitectónico de vivienda multifamiliar enfocado en una organización funcional clara y ordenada.
                 <br /><br />
-                El alcance incluyó el desarrollo completo del proyecto arquitectónico y la elaboración de planos técnicos
-                para gestión y presentación, acompañando al cliente con asesoría clara durante todo el proceso.
+                El diseño considera estacionamiento en primer nivel y unidades habitacionales distribuidas en niveles superiores,
+                integrando áreas sociales, privadas y de servicio.
+                <br /><br />
+                La propuesta responde a las condiciones del entorno urbano y a las necesidades habitacionales del proyecto,
+                priorizando iluminación, ventilación y eficiencia espacial.
               </p>
             </div>
           </div>
@@ -209,27 +187,27 @@
           <div class="project-gallery__box" id="project-gallery">
             <div class="project-gallery__card">
               <img
-                alt="Imagen del proyecto San Genaro"
+                alt="Vivienda multifamiliar en Chorrillos: vista general del proyecto"
                 class="project-gallery__image"
-                src="images/Sol-y-Mar-1.webp"
+                src="images/vivienda-multifamiliar-chorrillos-1.webp"
                 loading="lazy"
               />
             </div>
 
             <div class="project-gallery__card">
               <img
-                alt="Imagen del proyecto San Genaro"
+                alt="Vivienda multifamiliar en Chorrillos: organización de niveles y áreas"
                 class="project-gallery__image"
-                src="images/Sol-y-Mar-2.webp"
+                src="images/vivienda-multifamiliar-chorrillos-2.webp"
                 loading="lazy"
               />
             </div>
 
             <div class="project-gallery__card">
               <img
-                alt="Imagen del proyecto San Genaro"
+                alt="Vivienda multifamiliar en Chorrillos: iluminación, ventilación y eficiencia espacial"
                 class="project-gallery__image"
-                src="images/Sol-y-Mar-3.webp"
+                src="images/vivienda-multifamiliar-chorrillos-3.webp"
                 loading="lazy"
               />
             </div>
@@ -240,11 +218,11 @@
       <!-- CTA -->
       <section class="project__cta">
         <div class="project-action__wrapper">
-          <h2 class="project-action__title project__title--h2">¿Tienes un proyecto en mente?</h2>
+          <h2 class="project-action__title project__title--h2">¿Planeas un proyecto de vivienda?</h2>
 
           <p class="project__cta--text">
-            Si estás por construir, remodelar o regularizar, conversemos primero.
-            Evaluemos tu caso con criterio técnico y definamos el mejor camino antes de ejecutar.
+            Una vivienda multifamiliar necesita un planteamiento claro desde el inicio: distribución, ventilación, iluminación
+            y compatibilidad con el entorno. Conversemos y evaluemos tu caso con criterio técnico antes de ejecutar.
           </p>
 
           <div class="project__cta--buttons">
@@ -309,22 +287,19 @@
 
             <div class="footer-col">
               <h4>Síguenos</h4>
-            
+          
               <div class="social-links">
                 <a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-           
+          
             </div>
           </div>
         </div>
       </footer>
     </main>
 
-    <!-- JS (MENÚ / INTERACCIONES DEL SITIO) -->
+    <!-- JS -->
     <script src="js/main.js" type="module"></script>
-
-    <!-- Tracking anterior eliminado -->
   </body>
 </html>

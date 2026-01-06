@@ -1231,6 +1231,7 @@ img {
 .projects__content {
   text-align: start;
   padding: 2rem 1.5rem;
+  background-color: #fff;
 }
 .projects__subtitle {
   font-size: var(--font-size-h4);
