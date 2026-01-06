@@ -58,3 +58,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Si luego quieres reactivar otros scripts, agrégalos aquí SIN imports
 });
+// Scroll to top button
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+if (scrollToTopBtn) {
+  // Ocúltalo al inicio (si quieres que aparezca solo al bajar)
+  scrollToTopBtn.style.display = "none";
+
+  // Mostrar/ocultar al hacer scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  });
+
+  // Click: subir arriba
+  scrollToTopBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
