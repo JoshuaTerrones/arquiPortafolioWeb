@@ -167,7 +167,7 @@ main.container {
   top: var(--height-navbar);
   left: -100%;
   z-index: 110;
-  background-color: var(--color-accent);
+  background-color:#c47a5a;
   width: 100%;
   height: calc(100vh - var(--height-navbar));
   border-top: 0.5px solid var(--color-background-light);
@@ -852,13 +852,13 @@ main.container {
 .process__subtitle {
   font-size: var(--font-size-h3);
   font-weight: 600;
-  color: var(--color-text-body);
+  color:  #f2e8cf;
   margin-bottom: 1rem;
 }
 
 .process__description {
   font-size: var(--font-size-paragraph);
-  color: var(--color-text-body);
+  color: #f2e8cf;
   margin-bottom: 1.5rem;
 }
 
@@ -1168,14 +1168,14 @@ main.container {
   font-size: var(--font-size-h3);
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--color-text-body);
+  color:  #f2e8cf;
   text-align: center;
 }
 
 .article__text--item {
   font-size: var(--font-size-paragraph);
   font-weight: 400;
-  color: var(--color-text-body);
+  color: #f2e8cf;
   margin-bottom: 1rem;
 }
 
@@ -1638,5 +1638,58 @@ main.container {
   .form__message,
   .form__submit {
     grid-column: 1/-1;
+  }
+}
+/* =========================
+   REVEAL CON JS (estable)
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 650ms ease, transform 650ms ease;
+  transition-delay: var(--d, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Por seguridad: Contacto nunca se "apaga" */
+.contact .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Respeta accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+/* =========================
+   HERO ENTRADA AL CARGAR
+========================= */
+.banner__wrapper {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 800ms ease, transform 800ms ease;
+}
+
+.banner__wrapper.hero-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner__wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

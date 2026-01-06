@@ -80,3 +80,53 @@ if (scrollToTopBtn) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+  // === REVEAL ANIMATIONS (IntersectionObserver) ===
+  const revealSelectors = [
+    ".services__item",
+    ".projects__item",
+    ".select__item--card",
+    ".testimonials__item",
+    ".process__item",
+    ".faq__item",
+    ".article__item",
+    ".districts__list-item",
+    ".cta__wrapper",
+    ".about__wrapper"
+  ].join(",");
+
+  const revealEls = Array.from(document.querySelectorAll(revealSelectors))
+    // EXCLUIMOS todo lo que esté dentro de Contacto para que no "grisee"
+    .filter((el) => !el.closest(".contact"));
+
+  // Marca como "reveal" y asigna delay suave (stagger)
+  revealEls.forEach((el, i) => {
+    el.classList.add("reveal");
+    // delay repetido para que no se vuelva eterno en listas largas
+    el.style.setProperty("--d", `${(i % 6) * 80}ms`);
+  });
+
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -10% 0px"
+      }
+    );
+
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    // fallback: si el navegador es muy viejo, mostramos todo
+    revealEls.forEach((el) => el.classList.add("is-visible"));
+  }
+  // === HERO ENTRADA AL CARGAR ===
+  const hero = document.querySelector(".banner__wrapper");
+  if (hero) {
+    requestAnimationFrame(() => hero.classList.add("hero-in"));
+  }
