@@ -5,18 +5,21 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- META (CRITERIO ARQUITECTÓNICO) -->
+    <!-- SEO -->
+    <title>Vivienda Multifamiliar – Gloria Anaya | Criterio Arquitectónico</title>
     <meta
       name="description"
       content="Vivienda multifamiliar Gloria Anaya en Santiago de Surco desarrollada por Criterio Arquitectónico. Diseño arquitectónico integral con planificación por niveles, cumplimiento normativo y una solución clara, funcional y duradera."
     />
     <meta name="author" content="Criterio Arquitectónico" />
     <meta name="robots" content="index, follow" />
-
-    <!-- CANONICAL (SIN DOMINIOS ANTERIORES) -->
     <link rel="canonical" href="/html/Proyecto-vivienda-multifamiliar-gloria-anaya.html" />
 
-    <title>Vivienda Multifamiliar Gloria Anaya | Criterio Arquitectónico</title>
+    <!-- FONT AWESOME (✅ estándar) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
+    />
 
     <!-- FAVICON -->
     <link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
@@ -30,7 +33,7 @@
     <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="/css/proyectos-global-styles.css" rel="stylesheet" type="text/css" />
 
-    <!-- FUENTE (CONSISTENTE CON EL RESTO DEL SITIO) -->
+    <!-- FUENTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,17 +42,20 @@
     />
 
     <!-- OPEN GRAPH -->
-    <meta property="og:title" content="Vivienda Multifamiliar Gloria Anaya | Criterio Arquitectónico" />
+    <meta property="og:title" content="Vivienda Multifamiliar – Gloria Anaya | Criterio Arquitectónico" />
     <meta
       property="og:description"
       content="Diseño arquitectónico integral de vivienda multifamiliar en Surco: planificación equilibrada por niveles, relación clara entre espacios y cumplimiento normativo."
     />
-    <!-- Reemplaza por imagen real del proyecto cuando la tengas -->
-    <meta property="og:image" content="images/vivienda-multifamiliar-gloria-anaya-banner.webp" />
+    <meta
+      property="og:image"
+      content="/image/proyectos/projects/ImageDesing_Sol-y-Mar_Miraflores/banner_Desktop_Sol-y-Mar.webp"
+    />
     <meta property="og:url" content="/html/Proyecto-vivienda-multifamiliar-gloria-anaya.html" />
     <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Criterio Arquitectónico" />
 
-    <!-- JSON-LD (LIMPIO, SIN MARCAS ANTERIORES) -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -69,7 +75,7 @@
     <main class="container">
       <!-- NAVBAR -->
       <header class="navbar">
-        <nav class="navbar__wrapper">
+        <nav class="navbar__wrapper" aria-labelledby="navbar-heading">
           <h2 class="visually-hidden" id="navbar-heading">Navegación Principal</h2>
 
           <a aria-label="Inicio de Criterio Arquitectónico" class="logo-brand" href="/index.html">
@@ -91,12 +97,8 @@
             id="menu-btn"
             type="button"
           >
-            <svg aria-hidden="true" class="menu-icon menu-icon--bars" height="18" style="display: block" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-bars"></use>
-            </svg>
-            <svg aria-hidden="true" class="menu-icon menu-icon--close" height="18" style="display: none" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-close"></use>
-            </svg>
+            <i class="fa-solid fa-bars menu-icon menu-icon--bars" aria-hidden="true" style="display: block"></i>
+            <i class="fa-solid fa-xmark menu-icon menu-icon--close" aria-hidden="true" style="display: none"></i>
           </button>
 
           <ul class="menu-list" id="menu-list">
@@ -107,13 +109,15 @@
               <a class="menu-list__link" href="/html/servicios.html" title="Ir a la página de servicios">Servicios</a>
             </li>
             <li class="menu-list__item">
-              <a class="menu-list__link" href="/html/proyectos.html" title="Ir a la página de proyectos">Proyectos</a>
+              <a aria-current="page" class="menu-list__link" href="/html/proyectos.html" title="Ir a la página de proyectos"
+                >Proyectos</a
+              >
             </li>
             <li class="menu-list__item">
               <a class="menu-list__link" href="/html/nosotros.html" title="Ir a la página sobre Nosotros">Nosotros</a>
             </li>
             <li class="menu-list__item">
-              <a class="menu-list__link" href="/html/contacto.html" title="Ir a la pagina de Contacto">Contacto</a>
+              <a class="menu-list__link" href="/html/contacto.html" title="Ir a la página de Contacto">Contacto</a>
             </li>
           </ul>
         </nav>
@@ -124,20 +128,20 @@
         <picture>
           <source
             media="(max-width: 767px)"
-            srcset="images/vivienda-multifamiliar-gloria-anaya-banner.webp"
+            srcset="/image/proyectos/projects/ImageDesing_Sol-y-Mar_Miraflores/banner_Mobile_Sol-y-Mar.webp"
             type="image/webp"
           />
           <source
             media="(min-width: 768px)"
-            srcset="images/vivienda-multifamiliar-gloria-anaya-banner.webp"
+            srcset="/image/proyectos/projects/ImageDesing_Sol-y-Mar_Miraflores/banner_Desktop_Sol-y-Mar.webp"
             type="image/webp"
           />
           <img
-            alt="Vivienda multifamiliar Gloria Anaya en Santiago de Surco | Criterio Arquitectónico"
+            alt="Vivienda Multifamiliar – Gloria Anaya | Criterio Arquitectónico"
             class="banner__image"
             height="1080"
             loading="eager"
-            src="images/vivienda-multifamiliar-gloria-anaya-banner.webp"
+            src="/image/proyectos/projects/ImageDesing_Sol-y-Mar_Miraflores/banner_Desktop_Sol-y-Mar.webp"
             width="1920"
           />
         </picture>
@@ -148,17 +152,11 @@
           <div class="banner__text">
             <div class="banner__title">
               <h1 class="banner__title--h1" id="banner-heading">Vivienda multifamiliar – Gloria Anaya</h1>
-              <h3 class="banner__title--h3">Residencial · Santiago de Surco, Lima – Perú</h3>
+              <p class="banner__title--h3">Residencial · Santiago de Surco, Lima – Perú</p>
             </div>
 
             <div class="banner__buttons">
-              <!-- WhatsApp (FORMATO CORRECTO: https://wa.me/51 + número) -->
-              <a
-                class="banner__button banner__button--primary"
-                href="https://wa.me/51953298941"
-                target="_blank"
-                rel="noopener"
-              >
+              <a class="banner__button banner__button--primary" href="https://wa.me/51953298941" target="_blank" rel="noopener">
                 <span class="banner__button--text">Agendar asesoría</span>
               </a>
             </div>
@@ -200,27 +198,27 @@
           <div class="project-gallery__box" id="project-gallery">
             <div class="project-gallery__card">
               <img
-                alt="Vivienda multifamiliar Gloria Anaya: vista general del proyecto"
+                alt="Vivienda Multifamiliar – Gloria Anaya: imagen 1"
                 class="project-gallery__image"
-                src="images/vivienda-multifamiliar-gloria-anaya-1.webp"
+                src="images/Sol-y-Mar-1.webp"
                 loading="lazy"
               />
             </div>
 
             <div class="project-gallery__card">
               <img
-                alt="Vivienda multifamiliar Gloria Anaya: organización por niveles y usos"
+                alt="Vivienda Multifamiliar – Gloria Anaya: imagen 2"
                 class="project-gallery__image"
-                src="images/vivienda-multifamiliar-gloria-anaya-2.webp"
+                src="images/Sol-y-Mar-2.webp"
                 loading="lazy"
               />
             </div>
 
             <div class="project-gallery__card">
               <img
-                alt="Vivienda multifamiliar Gloria Anaya: relación entre áreas sociales, privadas y complementarias"
+                alt="Vivienda Multifamiliar – Gloria Anaya: imagen 3"
                 class="project-gallery__image"
-                src="images/vivienda-multifamiliar-gloria-anaya-3.webp"
+                src="images/Sol-y-Mar-3.webp"
                 loading="lazy"
               />
             </div>
@@ -231,50 +229,44 @@
       <!-- CTA -->
       <section class="project__cta">
         <div class="project-action__wrapper">
-          <h2 class="project-action__title project__title--h2">¿Buscas una vivienda pensada para crecer?</h2>
+          <h2 class="project-action__title project__title--h2">¿Planeas un proyecto de vivienda?</h2>
 
           <p class="project__cta--text">
-            Un proyecto multifamiliar necesita decisiones claras desde el inicio: organización por niveles, relación entre
+            Una vivienda multifamiliar necesita decisiones claras desde el inicio: organización por niveles, relación entre
             ambientes y cumplimiento normativo. Conversemos y evaluemos tu caso con criterio técnico antes de ejecutar.
           </p>
 
           <div class="project__cta--buttons">
             <a class="btn btn--primary" href="https://wa.me/51953298941" target="_blank" rel="noopener">
-              <span class="bnt--text">Agendar asesoría</span>
+              <span class="btn--text bnt--text">Agendar asesoría</span>
             </a>
 
             <a class="btn btn--secondary" href="/html/proyectos.html">
-              <span class="bnt--text">Ver más proyectos</span>
+              <span class="btn--text bnt--text">Ver más proyectos</span>
             </a>
           </div>
         </div>
       </section>
 
       <!-- SCROLL TO TOP -->
-      <button id="scrollToTopBtn" style="display: block" title="Volver arriba">
-        <svg aria-hidden="true" class="icon" height="24" width="24">
-          <use xlink:href="/image/global/icons.svg#arrow-up"></use>
-        </svg>
+      <button id="scrollToTopBtn" title="Volver arriba" aria-label="Volver arriba" type="button">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
       </button>
 
       <!-- BOTÓN WHATSAPP -->
-      <div class="whatsapp__button">
-        <a
-          aria-label="Contactar vía WhatsApp"
-          class="whatsapp__button--float"
-          href="https://wa.me/51953298941"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg aria-hidden="true" class="icon" height="24" width="24">
-            <use xlink:href="/image/global/icons.svg#whatsapp"></use>
-          </svg>
-        </a>
-      </div>
+      <a
+        aria-label="Contactar vía WhatsApp"
+        class="whatsapp__button whatsapp__button--float"
+        href="https://wa.me/51953298941"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      </a>
 
-      <!-- FOOTER -->
+      <!-- FOOTER (✅ sin .container adentro) -->
       <footer class="footer">
-        <div class="container">
+        <div class="footer__wrapper">
           <div class="row">
             <div class="footer-col">
               <h4>Criterio Arquitectónico</h4>
@@ -300,20 +292,18 @@
 
             <div class="footer-col">
               <h4>Síguenos</h4>
-          
               <div class="social-links">
-                <a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
               </div>
-
             </div>
           </div>
         </div>
       </footer>
     </main>
 
-    <!-- JS -->
-    <script src="js/main.js" type="module"></script>
+    <!-- JS (✅ ruta absoluta) -->
+    <script src="/js/main.js" type="module"></script>
   </body>
 </html>
