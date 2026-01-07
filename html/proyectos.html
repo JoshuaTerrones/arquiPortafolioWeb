@@ -17,7 +17,7 @@
     <!-- Canonical -->
     <link rel="canonical" href="/html/proyectos.html" />
 
-    <!-- FONT AWESOME (✅ igual que tus otras páginas) -->
+    <!-- FONT AWESOME -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
@@ -72,7 +72,7 @@
 
   <body>
     <main class="container">
-      <!-- NAVBAR (✅ mismo patrón que index/servicios) -->
+      <!-- NAVBAR -->
       <header class="navbar">
         <nav class="navbar__wrapper" aria-labelledby="navbar-heading">
           <h2 class="visually-hidden" id="navbar-heading">Navegación Principal</h2>
@@ -96,10 +96,7 @@
             id="menu-btn"
             type="button"
           >
-            <!-- Icono "hamburguesa" -->
             <i class="fa-solid fa-bars menu-icon menu-icon--bars" aria-hidden="true" style="display: block"></i>
-
-            <!-- Icono "cerrar" -->
             <i class="fa-solid fa-xmark menu-icon menu-icon--close" aria-hidden="true" style="display: none"></i>
           </button>
 
@@ -199,7 +196,7 @@
             </div>
           </div>
 
-          <div class="projects__boxes">
+          <div class="projects__boxes" id="project-slider">
             <!-- Proyecto 1 -->
             <article class="projects__item">
               <img
@@ -293,8 +290,8 @@
             </article>
           </div>
 
-          <!-- Controles (si luego activas carrusel real) -->
-          <div class="carousel__controls" aria-hidden="true">
+          <!-- Controles de deslizar -->
+          <div class="carousel__controls">
             <div class="controls__wrapper">
               <button aria-label="Ver proyecto anterior" class="carousel-prev" type="button">
                 <i class="fa-solid fa-arrow-left icon" aria-hidden="true"></i>
@@ -313,7 +310,7 @@
         <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
       </button>
 
-      <!-- BOTÓN WHATSAPP (✅ igual al resto) -->
+      <!-- BOTÓN WHATSAPP -->
       <a
         aria-label="Contactar vía WhatsApp"
         class="whatsapp__button whatsapp__button--float"
@@ -324,7 +321,7 @@
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
       </a>
 
-      <!-- FOOTER (✅ mismo patrón wrapper, sin class container para evitar bugs) -->
+      <!-- FOOTER -->
       <footer class="footer">
         <div class="footer__wrapper">
           <div class="row">
