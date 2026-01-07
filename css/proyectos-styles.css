@@ -340,7 +340,7 @@ main.container {
    PROJECTS GRID
 ========================================================= */
 .projects {
-  background: var(--color-background-light);
+  background: #3f5e73;
   display: grid;
 }
 
@@ -352,7 +352,7 @@ main.container {
 
 .projects__title--h2 {
   font-size: var(--font-size-paragraph);
-  color: var(--color-text-body);
+  color:#f2e8cf;
   font-weight: 900;
   margin-bottom: 1rem;
   letter-spacing: 1px;
@@ -362,7 +362,7 @@ main.container {
 
 .projects__paragraph {
   font-size: var(--font-size-paragraph);
-  color: var(--color-text-body);
+  color:#f2e8cf;
   font-weight: 400;
   max-width: 80ch;
   margin: 0 auto;
@@ -730,5 +730,89 @@ main.container {
 @media (min-width: 1080px) {
   .banner__title--h2 {
     font-size: 5rem;
+  }
+}
+/* =========================================================
+   FIX CARRUSEL PROYECTOS (MÓVIL + FLECHAS VISIBLES)
+   Pegar al FINAL del CSS para que gane prioridad
+========================================================= */
+
+/* En el fondo azul, define un color de texto para que currentColor funcione */
+.projects {
+  color: var(--color-background-light);
+}
+
+/* Flechas: por defecto ocultas en desktop */
+.carousel__controls {
+  display: none;
+}
+
+/* MÓVIL: carrusel horizontal + flechas */
+@media (max-width: 767px) {
+  .projects__boxes {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+
+  .projects__boxes::-webkit-scrollbar {
+    display: none;
+  }
+
+  .projects__item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .carousel__controls {
+    display: block;
+    margin-top: 14px;
+  }
+
+  .controls__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    appearance: none;
+    border: 1px solid var(--color-background-light);
+    color: var(--color-background-light);
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 999px;
+    padding: 10px 14px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform var(--dur-fast) var(--ease-snap),
+      background-color var(--dur-fast) var(--ease-soft),
+      opacity var(--dur-fast) var(--ease-soft);
+  }
+
+  .carousel-prev:hover,
+  .carousel-next:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 0, 0, 0.28);
+  }
+
+  .carousel-prev[disabled],
+  .carousel-next[disabled] {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+/* DESKTOP: grid normal (sin carrusel ni flechas) */
+@media (min-width: 768px) {
+  .projects__boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 2rem;
   }
 }
