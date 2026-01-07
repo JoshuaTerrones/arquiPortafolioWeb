@@ -1801,18 +1801,6 @@ main.container {
 /* =========================
    REVEAL CON JS (SNAPPY + estable)
 ========================= */
-.reveal {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 420ms var(--ease-soft), transform 420ms var(--ease-snap);
-  transition-delay: var(--d, 0ms);
-  will-change: opacity, transform;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Por seguridad: Contacto nunca se "apaga" */
 .contact .reveal {
