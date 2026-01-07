@@ -407,6 +407,64 @@ main.container {
 .otro-blockquote::after {
   content: "";
 }
+/* En RESULTS, evita el centrado global del wrapper */
+.results__wrapper {
+  text-align: left;
+}
+
+.results__wrapper {
+  text-align: center; /* puedes dejarlo así para el layout general */
+}
+
+.otro-blockquote {
+  width: 100%;
+  max-width: 72ch;
+
+  /* ✅ esto lo centra como “caja” */
+  margin: 2.5rem auto;
+
+  /* ✅ pero el texto queda “normal” (no centrado) */
+  text-align: left;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-style: italic;
+  color: var(--color-background-light);
+
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid var(--color-accent);
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Móvil: un poquito más de aire a los lados + menos padding */
+@media (max-width: 767px) {
+  .otro-blockquote {
+    width: calc(100% - 1.2rem); /* deja margen lateral aunque el wrapper sea 90% */
+    margin: 2rem auto;
+    padding: 1.1em 18px 1.1em 56px;
+    border-left-width: 6px;
+  }
+}
+
+/* Comillas */
+.otro-blockquote::before {
+  font-family: "Space Grotesk", sans-serif;
+  font-style: italic;
+  content: "\201C";
+  color: var(--color-primary);
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+
+
+  .otro-blockquote::before {
+    left: 12px;
+    top: -6px;
+    font-size: 3.2em;
+  }
 
 /* =========================================================
    SERVICES

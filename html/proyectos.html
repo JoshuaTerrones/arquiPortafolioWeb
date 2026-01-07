@@ -5,7 +5,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- META (CORREGIDOS A CRITERIO ARQUITECTÓNICO) -->
+    <!-- SEO -->
+    <title>Proyectos | Criterio Arquitectónico</title>
     <meta
       name="description"
       content="Explora proyectos desarrollados por Criterio Arquitectónico: vivienda, remodelación y soluciones técnicas con evaluación y acompañamiento en Lima Metropolitana."
@@ -13,10 +14,14 @@
     <meta name="author" content="Criterio Arquitectónico" />
     <meta name="robots" content="index, follow" />
 
-    <!-- CANONICAL (SIN DOMINIOS ANTERIORES) -->
-    <link href="/html/proyectos.html" rel="canonical" />
+    <!-- Canonical -->
+    <link rel="canonical" href="/html/proyectos.html" />
 
-    <title>Proyectos | Criterio Arquitectónico</title>
+    <!-- FONT AWESOME (✅ igual que tus otras páginas) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
+    />
 
     <!-- FAVICON -->
     <link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
@@ -30,7 +35,7 @@
     <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="/css/proyectos-styles.css" rel="stylesheet" type="text/css" />
 
-    <!-- Fuentes críticas -->
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,7 +43,7 @@
       rel="stylesheet"
     />
 
-    <!-- Open Graph (CORREGIDOS) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Proyectos | Criterio Arquitectónico" />
     <meta
       property="og:description"
@@ -46,9 +51,10 @@
     />
     <meta property="og:image" content="/image/servicios/banner/imageBanner_Service_3.webp" />
     <meta property="og:url" content="/html/proyectos.html" />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Criterio Arquitectónico" />
 
-    <!-- JSON-LD (LIMPIO) -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -66,9 +72,9 @@
 
   <body>
     <main class="container">
-      <!-- NAVBAR -->
+      <!-- NAVBAR (✅ mismo patrón que index/servicios) -->
       <header class="navbar">
-        <nav class="navbar__wrapper">
+        <nav class="navbar__wrapper" aria-labelledby="navbar-heading">
           <h2 class="visually-hidden" id="navbar-heading">Navegación Principal</h2>
 
           <a aria-label="Inicio de Criterio Arquitectónico" class="logo-brand" href="/index.html">
@@ -90,12 +96,11 @@
             id="menu-btn"
             type="button"
           >
-            <svg aria-hidden="true" class="menu-icon menu-icon--bars" height="18" style="display: block" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-bars"></use>
-            </svg>
-            <svg aria-hidden="true" class="menu-icon menu-icon--close" height="18" style="display: none" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-close"></use>
-            </svg>
+            <!-- Icono "hamburguesa" -->
+            <i class="fa-solid fa-bars menu-icon menu-icon--bars" aria-hidden="true" style="display: block"></i>
+
+            <!-- Icono "cerrar" -->
+            <i class="fa-solid fa-xmark menu-icon menu-icon--close" aria-hidden="true" style="display: none"></i>
           </button>
 
           <ul class="menu-list" id="menu-list">
@@ -114,14 +119,14 @@
               <a class="menu-list__link" href="/html/nosotros.html" title="Ir a la página sobre Nosotros">Nosotros</a>
             </li>
             <li class="menu-list__item">
-              <a class="menu-list__link" href="/html/contacto.html" title="Ir a la pagina de Contacto">Contacto</a>
+              <a class="menu-list__link" href="/html/contacto.html" title="Ir a la página de Contacto">Contacto</a>
             </li>
           </ul>
         </nav>
       </header>
 
       <!-- BANNER -->
-      <div class="banner">
+      <section class="banner" aria-labelledby="banner-heading">
         <div class="banner-image__container">
           <picture>
             <source media="(max-width: 767px)" srcset="/image/servicios/banner/imageBanner_Service_3.webp" type="image/webp" />
@@ -142,68 +147,67 @@
         <div class="banner__wrapper">
           <div class="banner__text">
             <div class="banner__title">
-              <h1 class="banner__title--h2">
+              <h1 class="banner__title--h2" id="banner-heading">
                 Proyectos desarrollados <br />
                 con criterio
               </h1>
             </div>
 
             <div class="banner__buttons">
-              <!-- WhatsApp (FORMATO CORRECTO: https://wa.me/51 + número) -->
               <a class="banner__button banner__button--primary" href="https://wa.me/51953298941" target="_blank" rel="noopener">
                 <span class="banner__button--text">Agendar asesoría</span>
               </a>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- PROJECTS INTRO -->
-      <section class="projects-intro">
+      <section class="projects-intro" aria-labelledby="projects-intro-heading">
         <div class="projects-intro__wrapper">
-          <h2 class="projects-intro__title">Proyectos desarrollados</h2>
+          <h2 class="projects-intro__title" id="projects-intro-heading">Proyectos desarrollados</h2>
 
           <p class="projects-intro__paragraph">
-            Cada proyecto presentado es el resultado de un proceso de análisis y toma de decisiones responsables.
-            No se trata solo del resultado final, sino del camino recorrido: entender el contexto, evaluar las
-            necesidades reales y proponer soluciones viables y funcionales.
+            Cada proyecto presentado es el resultado de un proceso de análisis y toma de decisiones responsables. No se trata solo del
+            resultado final, sino del camino recorrido: entender el contexto, evaluar las necesidades reales y proponer soluciones viables
+            y funcionales.
           </p>
 
           <p class="projects-intro__paragraph">
-            Los proyectos abarcan intervenciones en vivienda, espacios comerciales y áreas de trabajo,
-            siempre con un enfoque claro en la correcta organización del espacio, la funcionalidad y el respeto
-            por las condiciones técnicas y normativas de cada caso.
+            Los proyectos abarcan intervenciones en vivienda, espacios comerciales y áreas de trabajo, siempre con un enfoque claro en la
+            correcta organización del espacio, la funcionalidad y el respeto por las condiciones técnicas y normativas de cada caso.
           </p>
 
           <p class="projects-intro__paragraph">
-            Aquí se muestran proyectos pensados y desarrollados con criterio, donde la arquitectura responde
-            a un propósito concreto y no a una fórmula repetida.
+            Aquí se muestran proyectos pensados y desarrollados con criterio, donde la arquitectura responde a un propósito concreto y no a
+            una fórmula repetida.
           </p>
         </div>
       </section>
 
       <!-- PROJECTS -->
-      <section aria-labelledby="projects-heading" class="projects">
+      <section class="projects" aria-labelledby="projects-heading">
         <div class="projects__wrapper">
           <div class="projects__text">
             <div class="projects__title">
-              <h2 class="projects__title--h2">Proyectos realizados</h2>
-              <h3 class="projects-intro__paragraph" id="projects-heading">
-                Algunos proyectos desarrollados en vivienda, remodelación y trámites técnicos. Cada uno responde a una
-                necesidad concreta y a un proceso claro de trabajo.
-              </h3>
+              <h2 class="projects__title--h2" id="projects-heading">Proyectos realizados</h2>
+
+              <p class="projects__paragraph">
+                Algunos proyectos desarrollados en vivienda, remodelación y trámites técnicos. Cada uno responde a una necesidad concreta y a
+                un proceso claro de trabajo.
+              </p>
             </div>
           </div>
 
           <div class="projects__boxes">
             <!-- Proyecto 1 -->
-            <article class="projects__item" style="display: grid">
+            <article class="projects__item">
               <img
                 alt="Proyecto San Genaro | Criterio Arquitectónico"
                 class="projects__image"
                 height="180"
                 loading="lazy"
-                src="images/banner_Desktop_Sol-y-Mar.webp"
+                src="/images/banner_Desktop_Sol-y-Mar.webp"
                 width="320"
               />
               <div class="projects__content">
@@ -214,21 +218,19 @@
 
                 <a class="projects__link projects__button" href="/html/Proyecto-san-genaro.html">
                   <span class="projects__button--text">Ver más</span>
-                  <svg aria-hidden="true" class="icon" height="18" width="18">
-                    <use xlink:href="/image/global/icons.svg#arrow-right"></use>
-                  </svg>
+                  <i class="fa-solid fa-arrow-right icon" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
 
             <!-- Proyecto 2 -->
-            <article class="projects__item" style="display: grid">
+            <article class="projects__item">
               <img
                 alt="Proyecto Gloria Anaya | Criterio Arquitectónico"
                 class="projects__image"
                 height="180"
                 loading="lazy"
-                src="images/tacna308-01.webp"
+                src="/images/tacna308-01.webp"
                 width="320"
               />
               <div class="projects__content">
@@ -239,21 +241,19 @@
 
                 <a class="projects__link projects__button" href="/html/Proyecto-gloria-anaya.html">
                   <span class="projects__button--text">Ver más</span>
-                  <svg aria-hidden="true" class="icon" height="18" width="18">
-                    <use xlink:href="/image/global/icons.svg#arrow-right"></use>
-                  </svg>
+                  <i class="fa-solid fa-arrow-right icon" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
 
             <!-- Proyecto 3 -->
-            <article class="projects__item" style="display: grid">
+            <article class="projects__item">
               <img
                 alt="Proyecto Vivienda multifamiliar | Criterio Arquitectónico"
                 class="projects__image"
                 height="180"
                 loading="lazy"
-                src="images/colina-loft-banner.webp"
+                src="/images/colina-loft-banner.webp"
                 width="320"
               />
               <div class="projects__content">
@@ -264,20 +264,19 @@
 
                 <a class="projects__link projects__button" href="/html/Vivienda-multifamiliar-chorrillos.html">
                   <span class="projects__button--text">Ver más</span>
-                  <svg aria-hidden="true" class="icon" height="18" width="18">
-                    <use xlink:href="/image/global/icons.svg#arrow-right"></use>
-                  </svg>
+                  <i class="fa-solid fa-arrow-right icon" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
-    <!-- Proyecto 4 -->
-            <article class="projects__item" style="display: grid">
+
+            <!-- Proyecto 4 -->
+            <article class="projects__item">
               <img
                 alt="Vivienda multifamiliar - Gloria Anaya | Criterio Arquitectónico"
                 class="projects__image"
                 height="180"
                 loading="lazy"
-                src="images/tacna308-01.webp"
+                src="/images/tacna308-01.webp"
                 width="320"
               />
               <div class="projects__content">
@@ -288,27 +287,21 @@
 
                 <a class="projects__link projects__button" href="/html/Proyecto-vivienda-multifamiliar-gloria-anaya.html">
                   <span class="projects__button--text">Ver más</span>
-                  <svg aria-hidden="true" class="icon" height="18" width="18">
-                    <use xlink:href="/image/global/icons.svg#arrow-right"></use>
-                  </svg>
+                  <i class="fa-solid fa-arrow-right icon" aria-hidden="true"></i>
                 </a>
               </div>
             </article>
           </div>
- 
-          <!-- (Si luego haces carrusel real, aquí quedan los controles) -->
-          <div class="carousel__controls">
+
+          <!-- Controles (si luego activas carrusel real) -->
+          <div class="carousel__controls" aria-hidden="true">
             <div class="controls__wrapper">
-              <button aria-label="Ver proyecto anterior" class="carousel-prev" style="display: none">
-                <svg aria-hidden="true" class="icon" height="18" width="18">
-                  <use xlink:href="/image/global/icons.svg#arrow-left"></use>
-                </svg>
+              <button aria-label="Ver proyecto anterior" class="carousel-prev" type="button">
+                <i class="fa-solid fa-arrow-left icon" aria-hidden="true"></i>
               </button>
 
-              <button aria-label="Ver proyecto siguiente" class="carousel-next" style="display: none">
-                <svg aria-hidden="true" class="icon" height="18" width="18">
-                  <use xlink:href="/image/global/icons.svg#arrow-right"></use>
-                </svg>
+              <button aria-label="Ver proyecto siguiente" class="carousel-next" type="button">
+                <i class="fa-solid fa-arrow-right icon" aria-hidden="true"></i>
               </button>
             </div>
           </div>
@@ -316,30 +309,24 @@
       </section>
 
       <!-- SCROLL TO TOP -->
-      <button id="scrollToTopBtn" style="display: block" title="Volver arriba">
-        <svg aria-hidden="true" class="icon" height="24" width="24">
-          <use xlink:href="/image/global/icons.svg#arrow-up"></use>
-        </svg>
+      <button id="scrollToTopBtn" title="Volver arriba" aria-label="Volver arriba" type="button">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
       </button>
 
-      <!-- BOTÓN WHATSAPP -->
-      <div class="whatsapp__button">
-        <a
-          aria-label="Contactar vía WhatsApp"
-          class="whatsapp__button--float"
-          href="https://wa.me/51953298941"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg aria-hidden="true" class="icon" height="24" width="24">
-            <use xlink:href="/image/global/icons.svg#whatsapp"></use>
-          </svg>
-        </a>
-      </div>
+      <!-- BOTÓN WHATSAPP (✅ igual al resto) -->
+      <a
+        aria-label="Contactar vía WhatsApp"
+        class="whatsapp__button whatsapp__button--float"
+        href="https://wa.me/51953298941"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      </a>
 
-      <!-- FOOTER -->
+      <!-- FOOTER (✅ mismo patrón wrapper, sin class container para evitar bugs) -->
       <footer class="footer">
-        <div class="container">
+        <div class="footer__wrapper">
           <div class="row">
             <div class="footer-col">
               <h4>Criterio Arquitectónico</h4>
@@ -365,24 +352,19 @@
 
             <div class="footer-col">
               <h4>Síguenos</h4>
-
-           
               <div class="social-links">
-                <a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
               </div>
-              
             </div>
           </div>
         </div>
       </footer>
     </main>
 
-    <!-- JAVASCRIPT -->
-    <script src="js/main.js" type="module"></script>
-    <script defer src="js/carousel-projects.js"></script>
-
-    <!-- Tracking anterior eliminado -->
+    <!-- JAVASCRIPT (✅ rutas absolutas para que funcione desde /html/) -->
+    <script src="/js/main.js" type="module"></script>
+    <script defer src="/js/carousel-projects.js"></script>
   </body>
 </html>
