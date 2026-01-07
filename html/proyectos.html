@@ -35,7 +35,7 @@
     <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="/css/proyectos-styles.css" rel="stylesheet" type="text/css" />
 
-    <!-- Fuentes -->
+    <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -68,6 +68,59 @@
         }
       }
     </script>
+
+    <!-- ✅ FIX carrusel móvil (sin tocar tu CSS global) -->
+    <style>
+      @media (max-width: 767px) {
+        .projects__boxes {
+          display: flex;
+          gap: 16px;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+          padding-bottom: 8px;
+        }
+        .projects__boxes::-webkit-scrollbar {
+          display: none;
+        }
+        .projects__item {
+          flex: 0 0 100%;
+          scroll-snap-align: start;
+        }
+
+        .carousel__controls {
+          display: block;
+        }
+        .controls__wrapper {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          margin-top: 14px;
+        }
+        .carousel-prev,
+        .carousel-next {
+          appearance: none;
+          background: transparent;
+          border: 1px solid currentColor;
+          border-radius: 999px;
+          padding: 10px 14px;
+          line-height: 1;
+          cursor: pointer;
+        }
+        .carousel-prev[disabled],
+        .carousel-next[disabled] {
+          opacity: 0.4;
+          cursor: not-allowed;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .carousel__controls {
+          display: none;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -196,9 +249,10 @@
             </div>
           </div>
 
-          <div class="projects__boxes" id="project-slider">
+          <!-- ✅ TRACK del carrusel (JS lo usa) -->
+          <div class="projects__boxes" data-carousel="projects">
             <!-- Proyecto 1 -->
-            <article class="projects__item">
+            <article class="projects__item" style="display: grid">
               <img
                 alt="Proyecto San Genaro | Criterio Arquitectónico"
                 class="projects__image"
@@ -221,7 +275,7 @@
             </article>
 
             <!-- Proyecto 2 -->
-            <article class="projects__item">
+            <article class="projects__item" style="display: grid">
               <img
                 alt="Proyecto Gloria Anaya | Criterio Arquitectónico"
                 class="projects__image"
@@ -244,9 +298,9 @@
             </article>
 
             <!-- Proyecto 3 -->
-            <article class="projects__item">
+            <article class="projects__item" style="display: grid">
               <img
-                alt="Proyecto Vivienda multifamiliar | Criterio Arquitectónico"
+                alt="Vivienda multifamiliar – Chorrillos | Criterio Arquitectónico"
                 class="projects__image"
                 height="180"
                 loading="lazy"
@@ -254,12 +308,12 @@
                 width="320"
               />
               <div class="projects__content">
-                <h3 class="projects__subtitle">Proyecto: Vivienda multifamiliar</h3>
+                <h3 class="projects__subtitle">Proyecto: Vivienda multifamiliar – Chorrillos</h3>
                 <p class="projects__sector"><strong>Sector:</strong> Residencial</p>
                 <p class="projects__services"><strong>Servicio:</strong> Diseño arquitectónico completo</p>
-                <p class="projects__address"><strong>Lugar:</strong> Chorrillos, Lima</p>
+                <p class="projects__address"><strong>Lugar:</strong> Chorrillos, Lima – Perú</p>
 
-                <a class="projects__link projects__button" href="/html/Vivienda-multifamiliar-chorrillos.html">
+                <a class="projects__link projects__button" href="/html/Proyecto-vivienda-multifamiliar-chorrillos.html">
                   <span class="projects__button--text">Ver más</span>
                   <i class="fa-solid fa-arrow-right icon" aria-hidden="true"></i>
                 </a>
@@ -267,9 +321,9 @@
             </article>
 
             <!-- Proyecto 4 -->
-            <article class="projects__item">
+            <article class="projects__item" style="display: grid">
               <img
-                alt="Vivienda multifamiliar - Gloria Anaya | Criterio Arquitectónico"
+                alt="Vivienda multifamiliar – Gloria Anaya | Criterio Arquitectónico"
                 class="projects__image"
                 height="180"
                 loading="lazy"
@@ -277,10 +331,10 @@
                 width="320"
               />
               <div class="projects__content">
-                <h3 class="projects__subtitle">Proyecto: Vivienda multifamiliar - Gloria Anaya</h3>
+                <h3 class="projects__subtitle">Proyecto: Vivienda multifamiliar – Gloria Anaya</h3>
                 <p class="projects__sector"><strong>Sector:</strong> Residencial</p>
-                <p class="projects__services"><strong>Servicio:</strong> Proyecto arquitectónico integral</p>
-                <p class="projects__address"><strong>Lugar:</strong> Santiago de Surco, Lima</p>
+                <p class="projects__services"><strong>Servicio:</strong> Diseño arquitectónico integral</p>
+                <p class="projects__address"><strong>Lugar:</strong> Santiago de Surco, Lima – Perú</p>
 
                 <a class="projects__link projects__button" href="/html/Proyecto-vivienda-multifamiliar-gloria-anaya.html">
                   <span class="projects__button--text">Ver más</span>
@@ -290,7 +344,7 @@
             </article>
           </div>
 
-          <!-- Controles de deslizar -->
+          <!-- ✅ Flechas (como index) -->
           <div class="carousel__controls">
             <div class="controls__wrapper">
               <button aria-label="Ver proyecto anterior" class="carousel-prev" type="button">
@@ -321,7 +375,7 @@
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
       </a>
 
-      <!-- FOOTER -->
+      <!-- FOOTER (wrapper, sin .container adentro) -->
       <footer class="footer">
         <div class="footer__wrapper">
           <div class="row">
@@ -360,7 +414,7 @@
       </footer>
     </main>
 
-    <!-- JAVASCRIPT (✅ rutas absolutas para que funcione desde /html/) -->
+    <!-- JS -->
     <script src="/js/main.js" type="module"></script>
     <script defer src="/js/carousel-projects.js"></script>
   </body>
