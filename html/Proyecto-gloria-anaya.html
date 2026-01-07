@@ -5,18 +5,21 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- META (CRITERIO ARQUITECTÓNICO) -->
+    <!-- SEO -->
+    <title>Proyecto Gloria Anaya | Local Comercial | Criterio Arquitectónico</title>
     <meta
       name="description"
       content="Proyecto Gloria Anaya (Local Comercial) desarrollado por Criterio Arquitectónico. Arquitectura comercial flexible y adaptable, con definición espacial y estructural, y documentación técnica para licencias en Chorrillos, Lima."
     />
     <meta name="author" content="Criterio Arquitectónico" />
     <meta name="robots" content="index, follow" />
-
-    <!-- CANONICAL -->
     <link rel="canonical" href="/html/Proyecto-gloria-anaya.html" />
 
-    <title>Proyecto Gloria Anaya | Local Comercial | Criterio Arquitectónico</title>
+    <!-- FONT AWESOME (✅ estándar) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
+    />
 
     <!-- FAVICON -->
     <link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
@@ -44,10 +47,10 @@
       property="og:description"
       content="Proyecto arquitectónico completo para local comercial: estructura base flexible, definición espacial/estructural y documentación técnica para licencias en Chorrillos, Lima."
     />
-    <!-- Reemplaza por imagen real del proyecto cuando la tengas -->
-    <meta property="og:image" content="images/gloria-anaya-banner.webp" />
+    <meta property="og:image" content="/html/images/gloria-anaya-banner.webp" />
     <meta property="og:url" content="/html/Proyecto-gloria-anaya.html" />
     <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Criterio Arquitectónico" />
 
     <!-- JSON-LD -->
     <script type="application/ld+json">
@@ -69,7 +72,7 @@
     <main class="container">
       <!-- NAVBAR -->
       <header class="navbar">
-        <nav class="navbar__wrapper">
+        <nav class="navbar__wrapper" aria-labelledby="navbar-heading">
           <h2 class="visually-hidden" id="navbar-heading">Navegación Principal</h2>
 
           <a aria-label="Inicio de Criterio Arquitectónico" class="logo-brand" href="/index.html">
@@ -91,12 +94,8 @@
             id="menu-btn"
             type="button"
           >
-            <svg aria-hidden="true" class="menu-icon menu-icon--bars" height="18" style="display: block" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-bars"></use>
-            </svg>
-            <svg aria-hidden="true" class="menu-icon menu-icon--close" height="18" style="display: none" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-close"></use>
-            </svg>
+            <i class="fa-solid fa-bars menu-icon menu-icon--bars" aria-hidden="true" style="display: block"></i>
+            <i class="fa-solid fa-xmark menu-icon menu-icon--close" aria-hidden="true" style="display: none"></i>
           </button>
 
           <ul class="menu-list" id="menu-list">
@@ -107,13 +106,15 @@
               <a class="menu-list__link" href="/html/servicios.html" title="Ir a la página de servicios">Servicios</a>
             </li>
             <li class="menu-list__item">
-              <a class="menu-list__link" href="/html/proyectos.html" title="Ir a la página de proyectos">Proyectos</a>
+              <a aria-current="page" class="menu-list__link" href="/html/proyectos.html" title="Ir a la página de proyectos"
+                >Proyectos</a
+              >
             </li>
             <li class="menu-list__item">
               <a class="menu-list__link" href="/html/nosotros.html" title="Ir a la página sobre Nosotros">Nosotros</a>
             </li>
             <li class="menu-list__item">
-              <a class="menu-list__link" href="/html/contacto.html" title="Ir a la pagina de Contacto">Contacto</a>
+              <a class="menu-list__link" href="/html/contacto.html" title="Ir a la página de Contacto">Contacto</a>
             </li>
           </ul>
         </nav>
@@ -122,15 +123,14 @@
       <!-- BANNER -->
       <section aria-labelledby="banner-heading" class="banner">
         <picture>
-          <!-- Si aún no tienes versión mobile, puedes dejar la misma imagen -->
-          <source media="(max-width: 767px)" srcset="images/gloria-anaya-banner.webp" type="image/webp" />
-          <source media="(min-width: 768px)" srcset="images/gloria-anaya-banner.webp" type="image/webp" />
+          <source media="(max-width: 767px)" srcset="/html/images/gloria-anaya-banner.webp" type="image/webp" />
+          <source media="(min-width: 768px)" srcset="/html/images/gloria-anaya-banner.webp" type="image/webp" />
           <img
             alt="Proyecto Gloria Anaya | Local comercial en Chorrillos, Lima"
             class="banner__image"
             height="1080"
             loading="eager"
-            src="images/gloria-anaya-banner.webp"
+            src="/html/images/gloria-anaya-banner.webp"
             width="1920"
           />
         </picture>
@@ -141,7 +141,7 @@
           <div class="banner__text">
             <div class="banner__title">
               <h1 class="banner__title--h1" id="banner-heading">Proyecto Gloria Anaya</h1>
-              <h3 class="banner__title--h3">Local comercial · Av. Guardia Civil, Chorrillos – Lima</h3>
+              <p class="banner__title--h3">Local comercial · Av. Guardia Civil, Chorrillos – Lima</p>
             </div>
 
             <div class="banner__buttons">
@@ -189,7 +189,7 @@
               <img
                 alt="Proyecto Gloria Anaya: vista general del local comercial"
                 class="project-gallery__image"
-                src="images/gloria-anaya-1.webp"
+                src="/html/images/gloria-anaya-1.webp"
                 loading="lazy"
               />
             </div>
@@ -198,7 +198,7 @@
               <img
                 alt="Proyecto Gloria Anaya: estructura base y definición espacial"
                 class="project-gallery__image"
-                src="images/gloria-anaya-2.webp"
+                src="/html/images/gloria-anaya-2.webp"
                 loading="lazy"
               />
             </div>
@@ -207,7 +207,7 @@
               <img
                 alt="Proyecto Gloria Anaya: detalle de propuesta arquitectónica"
                 class="project-gallery__image"
-                src="images/gloria-anaya-3.webp"
+                src="/html/images/gloria-anaya-3.webp"
                 loading="lazy"
               />
             </div>
@@ -227,41 +227,35 @@
 
           <div class="project__cta--buttons">
             <a class="btn btn--primary" href="https://wa.me/51953298941" target="_blank" rel="noopener">
-              <span class="bnt--text">Agendar asesoría</span>
+              <span class="btn--text">Agendar asesoría</span>
             </a>
 
             <a class="btn btn--secondary" href="/html/proyectos.html">
-              <span class="bnt--text">Ver más proyectos</span>
+              <span class="btn--text">Ver más proyectos</span>
             </a>
           </div>
         </div>
       </section>
 
       <!-- SCROLL TO TOP -->
-      <button id="scrollToTopBtn" style="display: block" title="Volver arriba">
-        <svg aria-hidden="true" class="icon" height="24" width="24">
-          <use xlink:href="/image/global/icons.svg#arrow-up"></use>
-        </svg>
+      <button id="scrollToTopBtn" title="Volver arriba" aria-label="Volver arriba" type="button">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
       </button>
 
       <!-- BOTÓN WHATSAPP -->
-      <div class="whatsapp__button">
-        <a
-          aria-label="Contactar vía WhatsApp"
-          class="whatsapp__button--float"
-          href="https://wa.me/51953298941"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg aria-hidden="true" class="icon" height="24" width="24">
-            <use xlink:href="/image/global/icons.svg#whatsapp"></use>
-          </svg>
-        </a>
-      </div>
+      <a
+        aria-label="Contactar vía WhatsApp"
+        class="whatsapp__button whatsapp__button--float"
+        href="https://wa.me/51953298941"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      </a>
 
-      <!-- FOOTER -->
+      <!-- FOOTER (✅ sin .container adentro) -->
       <footer class="footer">
-        <div class="container">
+        <div class="footer__wrapper">
           <div class="row">
             <div class="footer-col">
               <h4>Criterio Arquitectónico</h4>
@@ -287,20 +281,18 @@
 
             <div class="footer-col">
               <h4>Síguenos</h4>
-           
               <div class="social-links">
-                <a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
               </div>
-        
             </div>
           </div>
         </div>
       </footer>
     </main>
 
-    <!-- JS -->
-    <script src="js/main.js" type="module"></script>
+    <!-- JS (✅ ruta absoluta) -->
+    <script src="/js/main.js" type="module"></script>
   </body>
 </html>

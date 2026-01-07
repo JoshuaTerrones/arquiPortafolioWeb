@@ -5,7 +5,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- META (CORREGIDOS A CRITERIO ARQUITECTÓNICO) -->
+    <!-- SEO -->
+    <title>Nosotros | Criterio Arquitectónico</title>
     <meta
       name="description"
       content="Conoce Criterio Arquitectónico: enfoque de trabajo basado en análisis, criterio técnico y comunicación clara. Proyectos de vivienda, remodelación y regularización técnica en Lima Metropolitana."
@@ -13,10 +14,14 @@
     <meta name="author" content="Criterio Arquitectónico" />
     <meta name="robots" content="index, follow" />
 
-    <!-- CANONICAL (SIN DOMINIO ANTERIOR) -->
-    <link href="/html/nosotros.html" rel="canonical" />
+    <!-- Canonical -->
+    <link rel="canonical" href="/html/nosotros.html" />
 
-    <title>Nosotros | Criterio Arquitectónico</title>
+    <!-- FONT AWESOME (✅ igual al resto) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
+    />
 
     <!-- FAVICON -->
     <link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
@@ -30,7 +35,7 @@
     <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="/css/nosotros-styles.css" rel="stylesheet" type="text/css" />
 
-    <!-- Fuentes críticas -->
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,7 +43,7 @@
       rel="stylesheet"
     />
 
-    <!-- Open Graph (CORREGIDOS) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Nosotros | Criterio Arquitectónico" />
     <meta
       property="og:description"
@@ -46,9 +51,10 @@
     />
     <meta property="og:image" content="/image/nosotros/banner/imageBanner_nosotros.webp" />
     <meta property="og:url" content="/html/nosotros.html" />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Criterio Arquitectónico" />
 
-    <!-- JSON-LD (LIMPIO) -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -57,7 +63,7 @@
             "@type": "Organization",
             "name": "Criterio Arquitectónico",
             "url": "/",
-            "logo": "",
+            "logo": "/favicon/favicon-32x32.png",
             "description": "Estudio orientado a proyectos de vivienda, remodelación y regularización técnica con criterio profesional y acompañamiento.",
             "contactPoint": [
               {
@@ -85,7 +91,7 @@
     <main class="container">
       <!-- NAVBAR -->
       <header class="navbar">
-        <nav class="navbar__wrapper">
+        <nav class="navbar__wrapper" aria-labelledby="navbar-heading">
           <h2 class="visually-hidden" id="navbar-heading">Navegación Principal</h2>
 
           <a aria-label="Inicio de Criterio Arquitectónico" class="logo-brand" href="/index.html">
@@ -107,12 +113,11 @@
             id="menu-btn"
             type="button"
           >
-            <svg aria-hidden="true" class="menu-icon menu-icon--bars" height="18" style="display: block" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-bars"></use>
-            </svg>
-            <svg aria-hidden="true" class="menu-icon menu-icon--close" height="18" style="display: none" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-close"></use>
-            </svg>
+            <!-- Icono "hamburguesa" -->
+            <i class="fa-solid fa-bars menu-icon menu-icon--bars" aria-hidden="true" style="display: block"></i>
+
+            <!-- Icono "cerrar" -->
+            <i class="fa-solid fa-xmark menu-icon menu-icon--close" aria-hidden="true" style="display: none"></i>
           </button>
 
           <ul class="menu-list" id="menu-list">
@@ -131,14 +136,14 @@
               >
             </li>
             <li class="menu-list__item">
-              <a class="menu-list__link" href="/html/contacto.html" title="Ir a la pagina de Contacto">Contacto</a>
+              <a class="menu-list__link" href="/html/contacto.html" title="Ir a la página de Contacto">Contacto</a>
             </li>
           </ul>
         </nav>
       </header>
 
       <!-- BANNER -->
-      <div class="banner">
+      <section class="banner" aria-labelledby="banner-heading">
         <div class="banner-image__container">
           <picture>
             <source media="(max-width: 767px)" srcset="/image/nosotros/banner/imageBanner_nosotros.webp" type="image/webp" />
@@ -159,7 +164,7 @@
         <div class="banner__wrapper">
           <div class="banner__text">
             <div class="banner__title">
-              <h1 class="banner__title--h2">Nuestro enfoque arquitectónico</h1>
+              <h1 class="banner__title--h2" id="banner-heading">Nuestro enfoque arquitectónico</h1>
             </div>
 
             <div class="banner__buttons">
@@ -169,30 +174,36 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- ABOUT -->
-      <section class="about">
+      <section class="about" aria-labelledby="about-heading">
         <div class="about__wrapper">
           <div class="about__text">
             <div class="about__company">
               <div class="about__title">
-                <h2 class="about__title--h2">Arquitectura con criterio y responsabilidad</h2>
+                <h2 class="about__title--h2" id="about-heading">Arquitectura con criterio y responsabilidad</h2>
               </div>
 
-              <div class="about__text--paragraph">
+              <p class="about__text--paragraph">
                 Criterio Arquitectónico es un estudio orientado al desarrollo de proyectos de vivienda, remodelación y regularización
                 técnica en Lima Metropolitana.
-                <br /><br />
-                Nuestro enfoque se basa en acompañar cada proyecto desde la evaluación inicial, entendiendo que una buena arquitectura
-                no depende solo del diseño, sino de decisiones bien fundamentadas.
-                <br /><br />
-                Trabajamos con criterio técnico, comunicación transparente y responsabilidad profesional, explicando cada etapa del
-                proceso y evaluando alternativas antes de ejecutar.
-                <br /><br />
-                El objetivo es desarrollar soluciones funcionales y viables, evitando improvisaciones y priorizando el bienestar de
-                quienes habitan los espacios.
-              </div>
+              </p>
+
+              <p class="about__text--paragraph">
+                Nuestro enfoque se basa en acompañar cada proyecto desde la evaluación inicial, entendiendo que una buena arquitectura no
+                depende solo del diseño, sino de decisiones bien fundamentadas.
+              </p>
+
+              <p class="about__text--paragraph">
+                Trabajamos con criterio técnico, comunicación transparente y responsabilidad profesional, explicando cada etapa del proceso
+                y evaluando alternativas antes de ejecutar.
+              </p>
+
+              <p class="about__text--paragraph">
+                El objetivo es desarrollar soluciones funcionales y viables, evitando improvisaciones y priorizando el bienestar de quienes
+                habitan los espacios.
+              </p>
             </div>
           </div>
 
@@ -200,18 +211,20 @@
             class="about__image"
             data-bg="/image/nosotros/about/imageAbout1_nosotros.webp"
             style='background-image: url("/image/nosotros/about/imageAbout1_nosotros.webp");'
+            role="img"
+            aria-label="Imagen de enfoque arquitectónico"
           ></div>
         </div>
       </section>
 
       <!-- COMPANY -->
-      <section class="company">
+      <section class="company" aria-labelledby="company-heading">
         <div class="company__wrapper">
           <div class="company__misionvision">
             <div class="company__box company__box--mision">
               <div class="company__content company__content--mision">
                 <div class="company__title">
-                  <h2 class="company__title--h2">Nuestra Misión</h2>
+                  <h2 class="company__title--h2" id="company-heading">Nuestra Misión</h2>
                 </div>
                 <p class="company__paragraph">
                   Brindar asesoría y desarrollar proyectos de vivienda, remodelación y regularización técnica con criterio profesional,
@@ -221,7 +234,7 @@
               </div>
             </div>
 
-            <div class="company__box about__box--vision">
+            <div class="company__box company__box--vision">
               <div class="company__content company__content--vision">
                 <div class="company__title">
                   <h2 class="company__title--h2">Visión</h2>
@@ -239,61 +252,63 @@
             class="company__image"
             data-bg="/image/nosotros/about/imageAbout2_nosotros.webp"
             style='background-image: url("/image/nosotros/about/imageAbout2_nosotros.webp");'
+            role="img"
+            aria-label="Imagen de trabajo arquitectónico"
           ></div>
         </div>
       </section>
 
       <!-- VALORES -->
-      <div class="valores">
+      <section class="valores" aria-labelledby="valores-heading">
         <div class="valores__wrapper">
           <div class="valores__title">
-            <h2 class="valores__title--h2">Valores</h2>
+            <h2 class="valores__title--h2" id="valores-heading">Valores</h2>
           </div>
 
           <div class="valores__boxes">
             <div class="valores__box1">
               <div class="valores__text">
-                <div class="valores__subtitle">Criterio técnico</div>
-                <div class="valores__paragraph">Decisiones fundamentadas en análisis, contexto y normativa.</div>
+                <h3 class="valores__subtitle">Criterio técnico</h3>
+                <p class="valores__paragraph">Decisiones fundamentadas en análisis, contexto y normativa.</p>
               </div>
             </div>
 
             <div class="valores__box2">
               <div class="valores__text">
-                <div class="valores__subtitle">Claridad</div>
-                <div class="valores__paragraph">Procesos explicados con transparencia y lenguaje comprensible.</div>
+                <h3 class="valores__subtitle">Claridad</h3>
+                <p class="valores__paragraph">Procesos explicados con transparencia y lenguaje comprensible.</p>
               </div>
             </div>
 
             <div class="valores__box3">
               <div class="valores__text">
-                <div class="valores__subtitle">Responsabilidad profesional</div>
-                <div class="valores__paragraph">Compromiso real con el proyecto, el cliente y la arquitectura.</div>
+                <h3 class="valores__subtitle">Responsabilidad profesional</h3>
+                <p class="valores__paragraph">Compromiso real con el proyecto, el cliente y la arquitectura.</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- SCROLL TO TOP -->
-      <button id="scrollToTopBtn" style="display: block" title="Volver arriba">
-        <svg aria-hidden="true" class="icon" height="24" width="24">
-          <use xlink:href="/image/global/icons.svg#arrow-up"></use>
-        </svg>
+      <button id="scrollToTopBtn" title="Volver arriba" aria-label="Volver arriba" type="button">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
       </button>
 
       <!-- BOTÓN WHATSAPP -->
-      <div class="whatsapp__button">
-        <a aria-label="Contactar vía WhatsApp" class="whatsapp__button--float" href="https://wa.me/51953298941" target="_blank" rel="noopener">
-          <svg aria-hidden="true" class="icon" height="24" width="24">
-            <use xlink:href="/image/global/icons.svg#whatsapp"></use>
-          </svg>
-        </a>
-      </div>
+      <a
+        aria-label="Contactar vía WhatsApp"
+        class="whatsapp__button whatsapp__button--float"
+        href="https://wa.me/51953298941"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      </a>
 
-      <!-- FOOTER -->
+      <!-- FOOTER (✅ mismo patrón que index: footer__wrapper, NO .container) -->
       <footer class="footer">
-        <div class="container">
+        <div class="footer__wrapper">
           <div class="row">
             <div class="footer-col">
               <h4>Criterio Arquitectónico</h4>
@@ -319,23 +334,18 @@
 
             <div class="footer-col">
               <h4>Síguenos</h4>
-
-           
               <div class="social-links">
-                <a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
               </div>
-            
             </div>
           </div>
         </div>
       </footer>
     </main>
 
-    <!-- JAVASCRIPT -->
-    <script src="js/main.js" type="module"></script>
-
-    <!-- Tracking anterior eliminado -->
+    <!-- JAVASCRIPT (✅ ruta absoluta porque estás en /html/) -->
+    <script src="/js/main.js" type="module"></script>
   </body>
 </html>

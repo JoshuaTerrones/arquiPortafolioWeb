@@ -109,11 +109,13 @@ main.container {
 .banner__wrapper,
 .form__wrapper,
 .footer__wrapper {
+
   max-width: 75rem;
   width: 90%;
   margin: 0 auto;
   text-align: center;
 }
+
 
 /* =========================================================
    HEADER / NAVBAR
@@ -1603,25 +1605,33 @@ main.container {
   color: #ffffff;
 }
 
+
 /* =========================================================
-   FOOTER (tu template)
+   FOOTER (IGUAL INDEX)
 ========================================================= */
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+  display: grid;
+  justify-items: center;
+}
+
+.footer__wrapper {
+  width: 90%;
+  max-width: 75rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
 }
 
-.footer {
-  background-color: #24262b;
-  padding: 70px 0;
-
-  display: grid;
-  justify-items: center;
-}
-
 .footer-col {
   width: 25%;
   padding: 0 15px;
+  text-align: left;
 }
 
 .footer-col h4 {
@@ -1631,6 +1641,7 @@ main.container {
   margin-bottom: 35px;
   font-weight: 500;
   position: relative;
+  display: inline-block; /* ✅ evita que la “rayita” se vaya a la izquierda si algo centra el texto */
 }
 
 .footer-col h4::before {
@@ -1638,7 +1649,7 @@ main.container {
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color: var(--color-primary); /* antes era rosa */
+  background-color: var(--color-primary);
   height: 2px;
   width: 50px;
 }
@@ -1655,7 +1666,6 @@ main.container {
   color: #bbbbbb;
   display: block;
 
-  /* 🔥 SNAPPY */
   transition: color var(--dur-fast) var(--ease-soft),
     transform var(--dur-fast) var(--ease-snap);
 }
@@ -1676,7 +1686,6 @@ main.container {
   border-radius: 50%;
   color: #ffffff;
 
-  /* 🔥 SNAPPY */
   transition: transform var(--dur-fast) var(--ease-snap),
     background-color var(--dur-fast) var(--ease-soft),
     color var(--dur-fast) var(--ease-soft);
@@ -1701,6 +1710,7 @@ main.container {
     width: 100%;
   }
 }
+
 
 /* =========================================================
    MEDIA QUERIES (NAV + BANNER + CONTACT + ABOUT + PROJECTS)

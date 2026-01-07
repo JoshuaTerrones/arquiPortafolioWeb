@@ -5,18 +5,21 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- META (CORREGIDOS A CRITERIO ARQUITECTÓNICO) -->
+    <!-- SEO -->
+    <title>Contacto | Criterio Arquitectónico</title>
     <meta
       name="description"
       content="Contáctanos en Criterio Arquitectónico para agendar una asesoría clara y evaluar tu proyecto de vivienda, remodelación o regularización técnica en Lima Metropolitana."
     />
     <meta name="author" content="Criterio Arquitectónico" />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="/html/contacto.html" />
 
-    <!-- CANONICAL (SIN DOMINIOS ANTERIORES) -->
-    <link href="/html/contacto.html" rel="canonical" />
-
-    <title>Contacto | Criterio Arquitectónico</title>
+    <!-- FONT AWESOME (✅ estándar) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"
+    />
 
     <!-- FAVICON -->
     <link href="/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
@@ -30,7 +33,7 @@
     <link href="/css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="/css/contacto-styles.css" rel="stylesheet" type="text/css" />
 
-    <!-- Fuentes críticas -->
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,7 +41,7 @@
       rel="stylesheet"
     />
 
-    <!-- Open Graph (CORREGIDOS) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Contacto | Criterio Arquitectónico" />
     <meta
       property="og:description"
@@ -46,9 +49,10 @@
     />
     <meta property="og:image" content="/image/contacto/banner/imageBanner_Contacto.webp" />
     <meta property="og:url" content="/html/contacto.html" />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Criterio Arquitectónico" />
 
-    <!-- JSON-LD (LIMPIO, SIN DATOS DE OTROS) -->
+    <!-- JSON-LD (sin email vacío) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -58,7 +62,6 @@
         "mainEntity": {
           "@type": "ContactPoint",
           "telephone": "+51 953298941",
-          "email": "",
           "contactType": "customer service",
           "areaServed": "PE",
           "availableLanguage": ["es"]
@@ -71,7 +74,7 @@
     <main class="container">
       <!-- NAVBAR -->
       <header class="navbar">
-        <nav class="navbar__wrapper">
+        <nav class="navbar__wrapper" aria-labelledby="navbar-heading">
           <h2 class="visually-hidden" id="navbar-heading">Navegación Principal</h2>
 
           <a aria-label="Inicio de Criterio Arquitectónico" class="logo-brand" href="/index.html">
@@ -93,12 +96,8 @@
             id="menu-btn"
             type="button"
           >
-            <svg aria-hidden="true" class="menu-icon menu-icon--bars" height="18" style="display: block" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-bars"></use>
-            </svg>
-            <svg aria-hidden="true" class="menu-icon menu-icon--close" height="18" style="display: none" width="18">
-              <use xlink:href="/image/global/icons.svg#menu-close"></use>
-            </svg>
+            <i class="fa-solid fa-bars menu-icon menu-icon--bars" aria-hidden="true" style="display: block"></i>
+            <i class="fa-solid fa-xmark menu-icon menu-icon--close" aria-hidden="true" style="display: none"></i>
           </button>
 
           <ul class="menu-list" id="menu-list">
@@ -115,7 +114,7 @@
               <a class="menu-list__link" href="/html/nosotros.html" title="Ir a la página sobre Nosotros">Nosotros</a>
             </li>
             <li class="menu-list__item">
-              <a aria-current="page" class="menu-list__link" href="/html/contacto.html" title="Ir a la pagina de Contacto"
+              <a aria-current="page" class="menu-list__link" href="/html/contacto.html" title="Ir a la página de Contacto"
                 >Contacto</a
               >
             </li>
@@ -124,7 +123,7 @@
       </header>
 
       <!-- BANNER -->
-      <div class="banner">
+      <section class="banner" aria-labelledby="banner-heading">
         <div class="banner-image__container">
           <picture>
             <source media="(max-width: 767px)" srcset="/image/contacto/banner/imageBanner_Contacto.webp" type="image/webp" />
@@ -145,15 +144,16 @@
         <div class="banner__wrapper">
           <div class="banner__text">
             <div class="banner__title">
-              <h1 class="banner__title--h2">Da el primer paso con una asesoría clara</h1>
+              <h1 class="banner__title--h2" id="banner-heading">Da el primer paso con una asesoría clara</h1>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- CONTACTO -->
       <section aria-labelledby="contact-heading" class="contact" id="contacto-section">
         <div class="form__wrapper">
+          <!-- INFO -->
           <div class="form__content">
             <div class="form__text">
               <div class="form__title">
@@ -166,7 +166,7 @@
 
             <div class="form__contact">
               <ul class="form__contact--items">
-                <!-- WhatsApp -->
+                <!-- Teléfono / WhatsApp -->
                 <li class="form__contact--list">
                   <a
                     aria-label="Contactar por WhatsApp"
@@ -175,44 +175,25 @@
                     rel="noopener"
                     target="_blank"
                   >
-                    <div class="form__contact--icons">
-                      <svg aria-hidden="true" class="icon" height="24" width="24">
-                        <use xlink:href="/image/global/icons.svg#phone"></use>
-                      </svg>
+                    <div class="form__contact--icons" aria-hidden="true">
+                      <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="form__contact--text">
-                      <span>Teléfono:</span><br />
-                      +51 953298941
+                      <span>Teléfono / WhatsApp:</span><br />
+                      +51 953 298 941
                     </div>
                   </a>
                 </li>
 
-                <!-- Correo (EN BLANCO PARA COMPLETAR) -->
+                <!-- Cobertura -->
                 <li class="form__contact--list">
-                  <div class="form__contact--link" aria-label="Correo (pendiente)">
-                    <div class="form__contact--icons">
-                      <svg aria-hidden="true" class="icon" height="24" width="24">
-                        <use xlink:href="/image/global/icons.svg#plane"></use>
-                      </svg>
+                  <div class="form__contact--link">
+                    <div class="form__contact--icons" aria-hidden="true">
+                      <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <div class="form__contact--text">
-                      <span>Correo:</span><br />
-                      <!-- Completar -->
-                    </div>
-                  </div>
-                </li>
-
-                <!-- Dirección (EN BLANCO PARA COMPLETAR) -->
-                <li class="form__contact--list">
-                  <div class="form__contact--link" aria-label="Dirección (pendiente)">
-                    <div class="form__contact--icons">
-                      <svg aria-hidden="true" class="icon" height="24" width="24">
-                        <use xlink:href="/image/global/icons.svg#location"></use>
-                      </svg>
-                    </div>
-                    <div class="form__contact--text">
-                      <span>Dirección:</span><br />
-                      <!-- Completar -->
+                      <span>Cobertura:</span><br />
+                      Lima Metropolitana
                     </div>
                   </div>
                 </li>
@@ -220,10 +201,8 @@
                 <!-- Horarios -->
                 <li class="form__contact--list">
                   <div class="form__contact--link">
-                    <div class="form__contact--icons">
-                      <svg aria-hidden="true" class="icon" height="24" width="24">
-                        <use xlink:href="/image/global/icons.svg#clock"></use>
-                      </svg>
+                    <div class="form__contact--icons" aria-hidden="true">
+                      <i class="fa-regular fa-clock"></i>
                     </div>
                     <div class="form__contact--text">
                       <span>Horarios de atención:</span><br />
@@ -231,6 +210,21 @@
                     </div>
                   </div>
                 </li>
+
+                <!-- Si luego quieres email real, lo agregamos aquí -->
+                <!--
+                <li class="form__contact--list">
+                  <a class="form__contact--link" href="mailto:tucorreo@dominio.com">
+                    <div class="form__contact--icons" aria-hidden="true">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="form__contact--text">
+                      <span>Correo:</span><br />
+                      tucorreo@dominio.com
+                    </div>
+                  </a>
+                </li>
+                -->
               </ul>
             </div>
           </div>
@@ -257,15 +251,16 @@
                   class="form__input"
                   id="fullname"
                   name="fullname"
-                  pattern="[A-Za-z\s]{2,50}"
                   placeholder="Ingresa tu nombre"
                   required
                   type="text"
+                  pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]{2,50}$"
+                  title="Ingresa un nombre válido (2 a 50 caracteres)."
                 />
                 <span class="form__error" id="fullname-error"></span>
               </div>
 
-              <div>
+              <div class="form__email">
                 <label class="form__label" for="email">
                   E-mail
                   <span class="visually-hidden">(requerido)</span>
@@ -276,41 +271,41 @@
                   class="form__input"
                   id="email"
                   name="email"
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                  placeholder="Tu@email.com"
+                  placeholder="tu@email.com"
                   required
-                  title="Ingresa un correo electrónico válido"
                   type="email"
+                  pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+                  title="Ingresa un correo electrónico válido."
                 />
                 <span class="form__error" id="email-error"></span>
               </div>
 
-              <div>
+              <div class="form__phone">
                 <label class="form__label" for="phone">Teléfono</label>
                 <input
                   autocomplete="tel"
                   class="form__input"
                   id="phone"
                   name="phone"
-                  pattern="\+?[0-9\s\-]{7,15}"
-                  placeholder="+51 953298941"
-                  title="Ingresa un número de teléfono válido"
+                  placeholder="+51 953 298 941"
                   type="tel"
+                  pattern="^\+?[0-9\s\-]{7,18}$"
+                  title="Ingresa un teléfono válido."
                 />
                 <span class="form__error" id="phone-error"></span>
               </div>
 
-              <div>
+              <div class="form__district">
                 <label class="form__label" for="district">Distrito</label>
                 <input
                   autocomplete="address-level2"
                   class="form__input"
                   id="district"
                   name="district"
-                  pattern="[A-Za-z\s]{2,50}"
                   placeholder="Ingresa tu distrito"
-                  title="Ingresa el distrito donde se realizará el proyecto"
                   type="text"
+                  pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]{2,50}$"
+                  title="Ingresa un distrito válido."
                 />
                 <span class="form__error" id="district-error"></span>
               </div>
@@ -328,24 +323,24 @@
                   name="message"
                   placeholder="Cuéntanos los detalles de tu proyecto..."
                   required
-                  rows="3"
+                  rows="4"
                   title="El mensaje no debe exceder los 500 caracteres."
                 ></textarea>
                 <span class="form__error" id="message-error"></span>
               </div>
 
+              <!-- Honeypot anti-spam -->
               <div style="display: none">
                 <label class="visually-hidden" for="honeypot">Deja esto vacío</label>
                 <input autocomplete="off" id="honeypot" name="_gotcha" tabindex="-1" type="text" />
               </div>
 
               <div class="form__submit">
-                <button aria-label="Enviar formulario de contacto" class="form__button form__style" type="submit">
-                  <span class="form__button--text">Enviar Mensaje</span>
+                <button aria-label="Enviar formulario de contacto" class="form__button" type="submit">
+                  <span class="form__button--text">Enviar mensaje</span>
                 </button>
               </div>
 
-              <!-- Subject SIN dominio anterior -->
               <input name="_subject" type="hidden" value="Nueva consulta desde Criterio Arquitectónico" />
               <input name="_language" type="hidden" value="es" />
             </form>
@@ -354,30 +349,24 @@
       </section>
 
       <!-- SCROLL TO TOP -->
-      <button id="scrollToTopBtn" style="display: block" title="Volver arriba">
-        <svg aria-hidden="true" class="icon" height="24" width="24">
-          <use xlink:href="/image/global/icons.svg#arrow-up"></use>
-        </svg>
+      <button id="scrollToTopBtn" title="Volver arriba" aria-label="Volver arriba" type="button">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
       </button>
 
       <!-- BOTÓN WHATSAPP -->
-      <div class="whatsapp__button">
-        <a
-          aria-label="Contactar vía WhatsApp"
-          class="whatsapp__button--float"
-          href="https://wa.me/51953298941"
-          target="_blank"
-          rel="noopener"
-        >
-          <svg aria-hidden="true" class="icon" height="24" width="24">
-            <use xlink:href="/image/global/icons.svg#whatsapp"></use>
-          </svg>
-        </a>
-      </div>
+      <a
+        aria-label="Contactar vía WhatsApp"
+        class="whatsapp__button whatsapp__button--float"
+        href="https://wa.me/51953298941"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      </a>
 
-      <!-- FOOTER -->
+      <!-- FOOTER (✅ sin .container adentro) -->
       <footer class="footer">
-        <div class="container">
+        <div class="footer__wrapper">
           <div class="row">
             <div class="footer-col">
               <h4>Criterio Arquitectónico</h4>
@@ -403,23 +392,18 @@
 
             <div class="footer-col">
               <h4>Síguenos</h4>
-
-          
               <div class="social-links">
-                <a href="" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
               </div>
-
             </div>
           </div>
         </div>
       </footer>
     </main>
 
-    <!-- JAVASCRIPT -->
-    <script src="js/main.js" type="module"></script>
-
-    <!-- Tracking anterior eliminado -->
+    <!-- JAVASCRIPT (✅ ruta absoluta porque estás en /html/) -->
+    <script src="/js/main.js" type="module"></script>
   </body>
 </html>

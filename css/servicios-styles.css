@@ -503,9 +503,8 @@ main.container {
   letter-spacing: 1px;
 }
 
-/* =========================================================
-   SCROLL TO TOP + WHATSAPP (igual index)
-========================================================= */
+
+/* ===================== SCROLL TO TOP + WHATSAPP ===================== */
 #scrollToTopBtn {
   display: none;
   position: fixed;
@@ -515,18 +514,15 @@ main.container {
   border: none;
   outline: none;
   background-color: var(--color-accent);
-  color: var(--color-background-light);
+  color: var(--color-text-light);
   cursor: pointer;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 
   transition: transform var(--dur-fast) var(--ease-snap),
-    background-color var(--dur-fast) var(--ease-soft),
-    opacity var(--dur-fast) var(--ease-soft),
-    visibility var(--dur-fast) var(--ease-soft);
-  will-change: transform;
+    background-color var(--dur-fast) var(--ease-soft);
 }
 
 #scrollToTopBtn:hover {
@@ -535,7 +531,8 @@ main.container {
 }
 
 #scrollToTopBtn i {
-  color: var(--color-background-light);
+  font-size: 24px;
+  color: var(--color-text-light);
 }
 
 .whatsapp__button {
@@ -552,9 +549,7 @@ main.container {
   right: 25px;
   box-shadow: var(--box-shadow-dark);
 
-  transition: transform var(--dur-fast) var(--ease-snap),
-    box-shadow var(--dur-fast) var(--ease-soft);
-  will-change: transform;
+  transition: transform var(--dur-fast) var(--ease-snap);
 }
 
 .whatsapp__button:hover {
@@ -562,8 +557,10 @@ main.container {
 }
 
 .whatsapp__button--float i {
+  font-size: 24px;
   color: #ffffff;
 }
+
 
 /* =========================================================
    FOOTER (IGUAL INDEX + FIX RAYITA)
