@@ -26,6 +26,15 @@
   --font-size-paragraph: 1.3rem;
 
   --padding-box: 1.5rem;
+
+  /* ===== MOTION (SNAPPY) ===== */
+  --ease-snap: cubic-bezier(0.2, 0.9, 0.2, 1);
+  --ease-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --dur-xxfast: 120ms;
+  --dur-xfast: 160ms;
+  --dur-fast: 220ms;
+  --dur-med: 320ms;
 }
 
 /* =========================================================
@@ -162,21 +171,25 @@ main.container {
   display: none;
 }
 
+/* 🔥 SNAPPY: menu con transform (más fluido que left) */
 .menu-list {
   position: absolute;
   top: var(--height-navbar);
-  left: -100%;
+  left: 0;
   z-index: 110;
-  background-color:#c47a5a;
+  background-color: #c47a5a;
   width: 100%;
   height: calc(100vh - var(--height-navbar));
   border-top: 0.5px solid var(--color-background-light);
-  transition: left 0.5s ease-out;
   overflow: hidden;
 
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 3.5rem);
+
+  transform: translateX(-100%);
+  transition: transform var(--dur-med) var(--ease-snap);
+  will-change: transform;
 }
 
 .menu-list__item {
@@ -193,7 +206,8 @@ main.container {
   line-height: 3.5rem;
   text-align: center;
   padding-left: 7.5%;
-  transition: background-color 0.5s ease-out, color 0.5s ease-out;
+  transition: background-color var(--dur-fast) var(--ease-soft),
+    color var(--dur-fast) var(--ease-soft);
 }
 
 .menu-list__link:hover {
@@ -201,7 +215,7 @@ main.container {
 }
 
 .show {
-  left: 0;
+  transform: translateX(0);
 }
 
 /* =========================================================
@@ -311,8 +325,14 @@ main.container {
   text-decoration: none;
   letter-spacing: 0.01rem;
   border-radius: 0.3rem;
-  transition: all 0.3s ease;
   overflow: hidden;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft),
+    background-color var(--dur-fast) var(--ease-soft),
+    border-color var(--dur-fast) var(--ease-soft);
+  will-change: transform;
 }
 
 .banner__button--primary {
@@ -329,6 +349,7 @@ main.container {
 
 .banner__button--primary:hover,
 .banner__button--secondary:hover {
+  transform: translateY(-2px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -446,7 +467,11 @@ main.container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   overflow: hidden;
-  transition: all 0.3s ease;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
 
   display: grid;
   grid-template-rows: auto 1fr;
@@ -454,6 +479,7 @@ main.container {
 }
 
 .services__item:hover {
+  transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -534,7 +560,11 @@ main.container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   overflow: hidden;
-  transition: all 0.3s ease;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
 
   display: none; /* carrusel */
 }
@@ -544,6 +574,7 @@ main.container {
 }
 
 .projects__item:hover {
+  transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -584,6 +615,12 @@ main.container {
   color: var(--color-secondary);
   display: inline-flex;
   align-items: center;
+
+  transition: transform var(--dur-fast) var(--ease-snap);
+}
+
+.projects__button:hover {
+  transform: translateX(2px);
 }
 
 .projects__button--text {
@@ -611,6 +648,14 @@ main.container {
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: 700;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    background-color var(--dur-fast) var(--ease-soft);
+}
+
+.carousel__controls button:hover {
+  transform: translateY(-2px);
 }
 
 /* =========================================================
@@ -663,12 +708,21 @@ main.container {
   border-radius: 12px;
   padding: 2rem 1.5rem;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
+}
+
+.select__item--card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 .select__card--title {
@@ -724,12 +778,21 @@ main.container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   overflow: hidden;
-  transition: all 0.3s ease;
   position: relative;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
 
   display: grid;
   grid-template-rows: auto 1fr;
   align-items: start;
+}
+
+.testimonials__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
 .testimonials__item::before {
@@ -829,6 +892,16 @@ main.container {
   padding: 2rem 1.5rem;
   position: relative;
   overflow: hidden;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
+}
+
+.process__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
 }
 
 .process__number {
@@ -852,7 +925,7 @@ main.container {
 .process__subtitle {
   font-size: var(--font-size-h3);
   font-weight: 600;
-  color:  #f2e8cf;
+  color: #f2e8cf;
   margin-bottom: 1rem;
 }
 
@@ -916,6 +989,16 @@ main.container {
   color: var(--color-background-light);
   font-size: 1.3rem;
   font-weight: 600;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
+}
+
+.cta__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
 /* =========================================================
@@ -971,6 +1054,16 @@ main.container {
   border-radius: 0.3rem;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
+}
+
+.about__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
 .about__button--text {
@@ -1015,6 +1108,13 @@ main.container {
   font-weight: 500;
   color: var(--color-text-body);
   border-left: 3px solid var(--color-primary);
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap);
+}
+
+.districts__list-item:hover {
+  transform: translateY(-1px);
 }
 
 /* =========================================================
@@ -1062,7 +1162,9 @@ main.container {
   border: 1px solid rgba(55, 54, 54, 0.12);
   border-radius: 0.5rem;
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+
+  /* 🔥 SNAPPY */
+  transition: box-shadow var(--dur-fast) var(--ease-soft);
 }
 
 .faq__item:hover {
@@ -1087,7 +1189,9 @@ main.container {
 
 .faq__icon {
   color: var(--color-primary);
-  transition: transform 0.3s ease;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap);
   flex-shrink: 0;
   margin-left: 1rem;
 }
@@ -1151,11 +1255,20 @@ main.container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   overflow: hidden;
-  transition: all 0.3s ease;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
 
   display: grid;
   grid-template-rows: auto 1fr;
   align-items: start;
+}
+
+.article__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
 .article__content {
@@ -1168,7 +1281,7 @@ main.container {
   font-size: var(--font-size-h3);
   font-weight: 700;
   margin-bottom: 1rem;
-  color:  #f2e8cf;
+  color: #f2e8cf;
   text-align: center;
 }
 
@@ -1247,6 +1360,13 @@ main.container {
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 0.75rem;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap);
+}
+
+.form__contact--link:hover {
+  transform: translateX(2px);
 }
 
 .form__contact--icons {
@@ -1298,6 +1418,16 @@ main.container {
   border: 1px solid #ced4da;
   margin-top: 0.75rem;
   color: #000;
+
+  /* 🔥 SNAPPY */
+  transition: border-color var(--dur-fast) var(--ease-soft),
+    box-shadow var(--dur-fast) var(--ease-soft);
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  border-color: rgba(196, 122, 90, 0.7);
+  box-shadow: 0 0 0 3px rgba(196, 122, 90, 0.18);
 }
 
 .form__input::placeholder,
@@ -1321,11 +1451,16 @@ main.container {
   cursor: pointer;
   border-radius: 0.3rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
 }
 
 .form__button:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
 .form__button--text {
@@ -1364,11 +1499,18 @@ main.container {
   width: 50px;
   height: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, opacity 0.4s, visibility 0.4s;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    background-color var(--dur-fast) var(--ease-soft),
+    opacity var(--dur-fast) var(--ease-soft),
+    visibility var(--dur-fast) var(--ease-soft);
+  will-change: transform;
 }
 
 #scrollToTopBtn:hover {
   background-color: var(--color-secondary);
+  transform: translateY(-2px);
 }
 
 #scrollToTopBtn i {
@@ -1388,7 +1530,11 @@ main.container {
   bottom: 25px;
   right: 25px;
   box-shadow: var(--box-shadow-dark);
-  transition: all 0.3s ease;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
 }
 
 .whatsapp__button:hover {
@@ -1450,12 +1596,15 @@ main.container {
   font-weight: 300;
   color: #bbbbbb;
   display: block;
-  transition: all 0.3s ease;
+
+  /* 🔥 SNAPPY */
+  transition: color var(--dur-fast) var(--ease-soft),
+    transform var(--dur-fast) var(--ease-snap);
 }
 
 .footer-col ul li a:hover {
   color: #ffffff;
-  padding-left: 8px;
+  transform: translateX(8px);
 }
 
 .footer-col .social-links a {
@@ -1468,12 +1617,17 @@ main.container {
   line-height: 40px;
   border-radius: 50%;
   color: #ffffff;
-  transition: all 0.5s ease;
+
+  /* 🔥 SNAPPY */
+  transition: transform var(--dur-fast) var(--ease-snap),
+    background-color var(--dur-fast) var(--ease-soft),
+    color var(--dur-fast) var(--ease-soft);
 }
 
 .footer-col .social-links a:hover {
   color: #24262b;
   background-color: var(--color-background-light);
+  transform: translateY(-2px);
 }
 
 /* Footer responsive */
@@ -1583,6 +1737,7 @@ main.container {
     border-top: none;
     background: transparent;
     transition: none;
+    transform: none;
   }
 
   .menu-list__item {
@@ -1609,7 +1764,9 @@ main.container {
     height: 1px;
     background-color: var(--color-background-light);
     transform: scaleX(0);
-    transition: all 0.5s;
+
+    /* 🔥 SNAPPY */
+    transition: transform var(--dur-med) var(--ease-snap);
   }
 
   .menu-list__link::before {
@@ -1640,13 +1797,14 @@ main.container {
     grid-column: 1/-1;
   }
 }
+
 /* =========================
-   REVEAL CON JS (estable)
+   REVEAL CON JS (SNAPPY + estable)
 ========================= */
 .reveal {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 650ms ease, transform 650ms ease;
+  transform: translateY(10px);
+  transition: opacity 420ms var(--ease-soft), transform 420ms var(--ease-snap);
   transition-delay: var(--d, 0ms);
   will-change: opacity, transform;
 }
@@ -1672,13 +1830,15 @@ main.container {
     transition: none !important;
   }
 }
+
 /* =========================
-   HERO ENTRADA AL CARGAR
+   HERO ENTRADA AL CARGAR (SNAPPY)
 ========================= */
 .banner__wrapper {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 800ms ease, transform 800ms ease;
+  transform: translateY(10px);
+  transition: opacity 300ms var(--ease-soft), transform 300ms var(--ease-snap);
+  will-change: opacity, transform;
 }
 
 .banner__wrapper.hero-in {
