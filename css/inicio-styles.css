@@ -650,19 +650,22 @@ main.container {
 .projects__content {
   text-align: start;
   padding: 2rem 1.5rem;
+
+  
 }
 
 .projects__subtitle {
-  font-size: var(--font-size-h4);
+  font-size: var(--font-size-h5);
   font-weight: 900;
   margin-bottom: 0.75rem;
   color: var(--color-primary);
+ 
 }
 
 .projects__sector,
 .projects__services,
 .projects__address {
-  font-size: var(--font-size-paragraph);
+  font-size: var(--font-size-paragraph2);
   font-weight: 400;
   color: var(--color-text-body);
 }
