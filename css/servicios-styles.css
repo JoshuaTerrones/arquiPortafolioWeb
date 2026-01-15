@@ -372,28 +372,6 @@ main.container {
   gap: 2rem;
 }
 
-.services__item {
-  background: #24262b;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15),
-    0 1px 3px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  overflow: hidden;
-
-  transition: transform var(--dur-fast) var(--ease-snap),
-    box-shadow var(--dur-fast) var(--ease-soft);
-  will-change: transform;
-
-  display: grid;
-  grid-template-rows: auto 1fr;
-  align-items: start;
-}
-
-.services__item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2),
-    0 2px 5px rgba(0, 0, 0, 0.15);
-}
-
 .services__image {
   width: 100%;
   height: auto;
@@ -401,12 +379,44 @@ main.container {
   object-position: center;
 }
 
-.services__content {
-  text-align: start;
-  padding: 2rem 1.5rem;
-  color: var(--color-background-light);
+
+.services__item {
+  background: #24262b;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  .services__image {
+  width: 80px;            /* Tamaño del icono */
+  height: 80px;           /* Alto igual para alineación */
+  margin-top: 2.5rem;     /* Espacio superior */
+  display: block;
+  object-fit: contain;    /* Para que no se deforme */
+  
+  /* Esto hace que el icono negro pase a ser blanco crema */
+  filter: brightness(0) invert(1) sepia(1) hue-rotate(10deg) saturate(0.5); 
+}
+  /* Forzamos el centrado total con Flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+
+  /* Animaciones Snappy */
+  transition: transform var(--dur-fast) var(--ease-snap),
+              box-shadow var(--dur-fast) var(--ease-soft);
+  will-change: transform;
 }
 
+.services__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.services__content {
+  text-align: center;    /* Cambiado de 'start' a 'center' para que coincida con el icono */
+  padding: 1.5rem;
+  color: var(--color-background-light);
+  width: 100%;
+}
 .services__subtitle {
   font-size: var(--font-size-h3);
   font-weight: 600;
