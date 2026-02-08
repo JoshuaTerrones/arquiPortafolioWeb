@@ -564,13 +564,18 @@ main.container {
   margin-bottom: 1rem;
   color: var(--color-background-light);
 }
-
 .services__text--item {
-  font-size: var(--font-size-paragraph);
-  font-weight: 300;
-  color: var(--color-background-light);
-  margin-bottom: 1rem;
+  text-align: left;
+  line-height: 1.65;
+  text-wrap: pretty;   /* navegadores modernos */
+  max-width: 95%;
+  margin-inline: auto;
 }
+
+
+
+
+
 
 /* =========================================================
    PROJECTS (carrusel)
@@ -1350,7 +1355,7 @@ main.container {
   font-weight: 700;
   margin-bottom: 1rem;
   color: #f2e8cf;
-  text-align: center;
+  text-align: left;
 }
 
 .article__text--item {
