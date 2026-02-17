@@ -6,7 +6,12 @@
 ========================================================= */
 
 /* ===================== VARIABLES ===================== */
-
+.project-gallery__box img {
+  width: 100%;
+  height: 400px;      /* mismo alto para todas */
+  object-fit: cover;  /* recorta sin deformar */
+  display: block;
+}
 
 :root {
   --color-primary: #c47a5a;
