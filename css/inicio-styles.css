@@ -646,11 +646,13 @@ main.container {
 
 .projects__image {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 200px;   /* fija una altura */
   object-fit: cover;
   object-position: center;
+  display: block;
 }
+
+
 
 .projects__content {
   text-align: start;
